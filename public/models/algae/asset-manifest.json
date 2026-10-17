@@ -1,0 +1,40 @@
+{
+  "seed": 73190,
+  "assets": [
+    {
+      "file": "filament-0.glb",
+      "triangles": 2460,
+      "bytes": 63456
+    },
+    {
+      "file": "filament-0-lod.glb",
+      "triangles": 310,
+      "bytes": 9516
+    },
+    {
+      "file": "filament-1.glb",
+      "triangles": 3116,
+      "bytes": 80072
+    },
+    {
+      "file": "filament-1-lod.glb",
+      "triangles": 310,
+      "bytes": 9516
+    },
+    {
+      "file": "filament-2.glb",
+      "triangles": 3772,
+      "bytes": 96680
+    },
+    {
+      "file": "filament-2-lod.glb",
+      "triangles": 310,
+      "bytes": 9516
+    },
+    {
+      "file": "leaf-reused.glb",
+      "triangles": 1099,
+      "bytes": 48064
+    }
+  ]
+}

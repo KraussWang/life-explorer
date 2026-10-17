@@ -1,0 +1,17 @@
+{
+  "blender": "5.2.2 LTS",
+  "objects": 12945,
+  "checks": {
+    "six_cameras": true,
+    "all_images_packed": true,
+    "static_meshes_have_UV": true,
+    "collision_hidden_in_render": true,
+    "library_hidden_in_render": true,
+    "positive_scales": true,
+    "emitter_coordinate_conversion": true,
+    "metre_units": true,
+    "no_floating_large_rocks_in_samples": true
+  },
+  "sampledContactWarnings": [],
+  "passed": true
+}

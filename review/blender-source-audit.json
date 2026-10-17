@@ -1,0 +1,103 @@
+{
+  "rock": {
+    "dimensions": [
+      1.894629955291748,
+      1.0255310535430908,
+      0.9385640025138855
+    ],
+    "vertices": 19209,
+    "faces": 35210,
+    "uv_layers": 1,
+    "textures": [
+      {
+        "name": "default.jpeg",
+        "size": [
+          680,
+          680
+        ]
+      },
+      {
+        "name": "texture_diffuse",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "name": "texture_metallic-texture_roughness",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "name": "texture_normal",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    ]
+  },
+  "vent": {
+    "dimensions": [
+      1.8743140697479248,
+      0.9131630063056946,
+      1.3996689319610596
+    ],
+    "vertices": 22245,
+    "faces": 38402,
+    "uv_layers": 1,
+    "textures": [
+      {
+        "name": "default.jpeg",
+        "size": [
+          680,
+          680
+        ]
+      },
+      {
+        "name": "texture_diffuse",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "name": "texture_diffuse.001",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "name": "texture_metallic-texture_roughness",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "name": "texture_metallic-texture_roughness.001",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "name": "texture_normal",
+        "size": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "name": "texture_normal.001",
+        "size": [
+          2048,
+          2048
+        ]
+      }
+    ]
+  }
+}

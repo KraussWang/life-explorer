@@ -1,0 +1,82 @@
+{
+  "fps": "60 FPS",
+  "info": {
+    "state": {
+      "version": 1,
+      "species": "fish",
+      "counts": {
+        "nutrient": 0,
+        "food": 0,
+        "specialization": 0
+      },
+      "collected": [],
+      "cold": "resolved",
+      "gathered": true,
+      "position": [
+        0,
+        5,
+        22
+      ],
+      "origin": [
+        0,
+        5,
+        22
+      ],
+      "unlocked": [
+        "cell",
+        "flagellate",
+        "colony",
+        "worm",
+        "fish"
+      ],
+      "checkpoint": {
+        "version": 1,
+        "species": "worm",
+        "counts": {
+          "nutrient": 0,
+          "food": 0,
+          "specialization": 0
+        },
+        "collected": [],
+        "cold": "resolved",
+        "gathered": true,
+        "position": [
+          0,
+          5,
+          22
+        ],
+        "origin": [
+          0,
+          5,
+          22
+        ],
+        "unlocked": [
+          "cell",
+          "flagellate",
+          "colony",
+          "worm"
+        ],
+        "checkpoint": null,
+        "quality": "low"
+      },
+      "quality": "low"
+    },
+    "phase": "ENDING",
+    "position": [
+      0,
+      5,
+      22
+    ],
+    "yaw": 0,
+    "paused": false,
+    "target": null,
+    "model": "fish",
+    "drawCalls": 85,
+    "triangles": 3890681,
+    "quality": {
+      "pixelRatio": 0.8,
+      "shadows": false
+    },
+    "ground": 1.1168906196912523
+  }
+}

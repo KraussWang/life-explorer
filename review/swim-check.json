@@ -1,0 +1,307 @@
+{
+  "checks": [
+    {
+      "name": "forward moves",
+      "pass": true,
+      "detail": {
+        "delta": [
+          0,
+          0,
+          -3.8304000000000187
+        ]
+      }
+    },
+    {
+      "name": "forward follows screen direction",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "expected": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "name": "forward body faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "facing": [
+          0,
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "name": "forward model axis faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0,
+          0,
+          -1
+        ],
+        "cellAxis": [
+          7.021564319559248e-16,
+          -0.006373452534709002,
+          -0.9999796893451323
+        ]
+      }
+    },
+    {
+      "name": "right moves",
+      "pass": true,
+      "detail": {
+        "delta": [
+          3.59641474327329,
+          0,
+          -0.3133141092305216
+        ]
+      }
+    },
+    {
+      "name": "right follows screen direction",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.9962266522678496,
+          0,
+          -0.08678973044775085
+        ],
+        "expected": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "right body faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.9962266522678496,
+          0,
+          -0.08678973044775085
+        ],
+        "facing": [
+          0.9999999998708282,
+          0,
+          -0.00001607308385886963
+        ]
+      }
+    },
+    {
+      "name": "right model axis faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.9962266522678496,
+          0,
+          -0.08678973044775085
+        ],
+        "cellAxis": [
+          0.9999748107692364,
+          0.0070977157380909504,
+          -0.000016072678992327364
+        ]
+      }
+    },
+    {
+      "name": "backward moves",
+      "pass": true,
+      "detail": {
+        "delta": [
+          0.3068322387449727,
+          0,
+          3.5868500447290756
+        ]
+      }
+    },
+    {
+      "name": "backward follows screen direction",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.08523236363349407,
+          0,
+          0.9963611013028599
+        ],
+        "expected": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "name": "backward body faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.08523236363349407,
+          0,
+          0.9963611013028599
+        ],
+        "facing": [
+          0.000016073039944480707,
+          0,
+          0.9999999998708287
+        ]
+      }
+    },
+    {
+      "name": "backward model axis faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.08523236363349407,
+          0,
+          0.9963611013028599
+        ],
+        "cellAxis": [
+          0.00001607255297352595,
+          -0.007784202917947148,
+          0.9999697025043336
+        ]
+      }
+    },
+    {
+      "name": "left moves",
+      "pass": true,
+      "detail": {
+        "delta": [
+          -3.586789923321307,
+          0,
+          0.30683856797275055
+        ]
+      }
+    },
+    {
+      "name": "left follows screen direction",
+      "pass": true,
+      "detail": {
+        "direction": [
+          -0.996360830665346,
+          0,
+          0.08523552731028128
+        ],
+        "expected": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "left body faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          -0.996360830665346,
+          0,
+          0.08523552731028128
+        ],
+        "facing": [
+          -0.9999999998711366,
+          0,
+          0.000016053887005540446
+        ]
+      }
+    },
+    {
+      "name": "left model axis faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          -0.996360830665346,
+          0,
+          0.08523552731028128
+        ],
+        "cellAxis": [
+          -0.9999582084736329,
+          0.009142267142054697,
+          0.00001605321609094499
+        ]
+      }
+    },
+    {
+      "name": "camera-turned-forward moves",
+      "pass": true,
+      "detail": {
+        "delta": [
+          2.731550583553871,
+          0,
+          -2.1251789955239957
+        ]
+      }
+    },
+    {
+      "name": "camera-turned-forward follows screen direction",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.7892626407909376,
+          0,
+          -0.6140557660764334
+        ],
+        "expected": [
+          0.8414709848078965,
+          0,
+          -0.5403023058681398
+        ]
+      }
+    },
+    {
+      "name": "camera-turned-forward body faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.7892626407909376,
+          0,
+          -0.6140557660764334
+        ],
+        "facing": [
+          0.8414577907016809,
+          0,
+          -0.540322853919253
+        ]
+      }
+    },
+    {
+      "name": "camera-turned-forward model axis faces travel",
+      "pass": true,
+      "detail": {
+        "direction": [
+          0.7892626407909376,
+          0,
+          -0.6140557660764334
+        ],
+        "cellAxis": [
+          0.841398584575399,
+          -0.011862453253606178,
+          -0.54028483606087
+        ]
+      }
+    },
+    {
+      "name": "no browser errors",
+      "pass": true,
+      "detail": {
+        "errors": []
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "broken JSON recovers to new game",
+    "pass": true
+  },
+  {
+    "name": "unsupported version recovers to new game",
+    "pass": true
+  },
+  {
+    "name": "inconsistent resources recovers to new game",
+    "pass": true
+  },
+  {
+    "name": "denied storage keeps gameplay available",
+    "pass": true
+  },
+  {
+    "name": "failed model load retains previous species and enables retry",
+    "pass": true
+  },
+  {
+    "name": "failed model request can be retried successfully",
+    "pass": true
+  },
+  {
+    "name": "locked atlas species cannot preview models",
+    "pass": true
+  }
+]

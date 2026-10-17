@@ -1,0 +1,92 @@
+{
+  "static_objects": 12802,
+  "unique_meshes": 10,
+  "unique_triangles": 289362,
+  "drawn_triangles": 3757329,
+  "colliders": 118,
+  "emitters": [
+    {
+      "name": "Hero_Right",
+      "position": [
+        16.668983459472656,
+        12.455527305603027,
+        -3.1319642066955566
+      ],
+      "height": 27,
+      "width": 3.105,
+      "seed": 5
+    },
+    {
+      "name": "Mid_Left",
+      "position": [
+        -23.10829734802246,
+        7.1148600578308105,
+        -31.178653717041016
+      ],
+      "height": 17.75,
+      "width": 1.633,
+      "seed": 22
+    },
+    {
+      "name": "Far_Centre",
+      "position": [
+        7.547867298126221,
+        5.015022277832031,
+        -65.96769714355469
+      ],
+      "height": 11.25,
+      "width": 1.0350000000000001,
+      "seed": 39
+    },
+    {
+      "name": "Far_Right",
+      "position": [
+        45.33005905151367,
+        9.418575286865234,
+        -70.29849243164062
+      ],
+      "height": 16.25,
+      "width": 1.495,
+      "seed": 56
+    },
+    {
+      "name": "Far_Left",
+      "position": [
+        -58.49268341064453,
+        10.264721870422363,
+        -84.23951721191406
+      ],
+      "height": 11.5,
+      "width": 1.058,
+      "seed": 73
+    }
+  ],
+  "assets": {
+    "rock": {
+      "original_vertices": 19209,
+      "original_faces": 35210,
+      "original_dimensions": [
+        1.8946300148963928,
+        1.025530993938446,
+        0.9385640025138855
+      ],
+      "UV_preserved": true
+    },
+    "vent": {
+      "original_vertices": 22245,
+      "original_faces": 38402,
+      "original_dimensions": [
+        1.87431401014328,
+        0.9131630063056946,
+        1.3996689319610596
+      ],
+      "UV_preserved": true,
+      "scene_cleanup": "Upper needle rebuilt as irregular open mineral chimney; original full-resolution GLB retained.",
+      "emitter_local": [
+        -0.08605892211198807,
+        -0.09420827031135559,
+        0.901
+      ]
+    }
+  }
+}

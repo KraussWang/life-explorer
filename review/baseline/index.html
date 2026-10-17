@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#03131f"><link rel="icon" href="data:,"><title>生命探索者 · 原始海洋</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <canvas id="ocean" tabindex="0" aria-label="可自由探索的原始海洋三维场景"></canvas>
+  <div class="vignette"></div>
+  <header class="hud"><div class="brand"><span class="brand-mark">◉</span> 生命探索者 <span class="separator">/</span> <span class="chapter">环境档案 01</span></div><div class="status"><i></i> 实时海洋 <span id="fps">— FPS</span></div></header>
+  <section class="title hud"><div class="eyebrow">THE PRIMORDIAL OCEAN</div><h1>原始海洋</h1><p>在光抵达的边缘，探索生命的起点。</p></section>
+  <aside class="hud" aria-label="探索设置">
+    <button id="explore" class="primary">进入自由探索 <span>↗</span></button>
+    <div class="panel"><div class="panel-heading">观察机位 <span>01 — 06</span></div><div id="views" class="views"></div></div>
+    <div class="panel compact"><label>水体能见度 <output id="clarity-value">标准</output><input id="clarity" aria-label="水体能见度" type="range" min="0.010" max="0.033" step="0.001" value="0.014"></label><div class="toggle-row"><span>悬浮颗粒</span><button id="particles" aria-pressed="true" class="toggle on">开</button></div><div class="toggle-row"><span>热液喷流</span><button id="plumes" aria-pressed="true" class="toggle on">开</button></div><div class="toggle-row"><span>渲染质量</span><button id="quality" class="quality">高</button></div></div>
+  </aside>
+  <footer class="hud"><div><span class="small-label">EXPLORATION LOG</span><div class="location"><span id="view-name">海底主视角</span><span class="live-dot">●</span><span id="position">—</span></div></div><div class="help"><span><kbd>W A S D</kbd> 移动</span><span><kbd>Q / E</kbd> 下潜 / 上浮</span><span><kbd>Shift</kbd> 加速</span><span><kbd>拖动</kbd> 环顾</span><span><kbd>H</kbd> 隐藏界面</span></div></footer>
+  <div id="reticle"></div><div id="notice" role="status"></div>
+  <div id="loading"><div class="loading-icon">◉</div><div class="eyebrow">LIFE EXPLORER</div><h2>潜入原始海洋</h2><p id="load-label">正在载入海底地形与 Hyper3D 资产…</p><div class="progress"><div id="progress"></div></div></div>
+  <script type="module" src="/main.js"></script>
+</body></html>
+

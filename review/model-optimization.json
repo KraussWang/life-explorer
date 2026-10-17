@@ -1,0 +1,16 @@
+[
+  {
+    "model": "fish",
+    "beforeFaces": 2000000,
+    "afterFaces": 100000,
+    "beforeBytes": 60337864,
+    "afterBytes": 7023276
+  },
+  {
+    "model": "bivalve",
+    "beforeFaces": 87720,
+    "afterFaces": 87720,
+    "beforeBytes": 21565316,
+    "afterBytes": 7385764
+  }
+]

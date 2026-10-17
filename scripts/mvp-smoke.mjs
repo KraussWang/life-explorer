@@ -1,0 +1,11 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({channel:'msedge',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist']});
+const page=await browser.newPage({viewport:{width:1440,height:900}});
+page.on('pageerror',e=>console.log('PAGE ERROR',e.message));page.on('console',m=>{if(m.type()==='error')console.log('CONSOLE ERROR',m.text());});
+await page.goto('http://127.0.0.1:5173/');await page.waitForFunction(()=>window.__life?.ready,{timeout:120000});
+await page.screenshot({path:'review/mvp-welcome.png'});await page.locator('#start').click();await page.waitForTimeout(1800);
+console.log(JSON.stringify(await page.evaluate(()=>window.__life.snapshot)));
+await page.screenshot({path:'review/mvp-cell.png'});
+await page.keyboard.press('r');await page.keyboard.down('w');await page.waitForTimeout(1500);await page.keyboard.up('w');
+console.log(JSON.stringify(await page.evaluate(()=>window.__life.snapshot)));
+await page.screenshot({path:'review/mvp-moving.png'});await browser.close();

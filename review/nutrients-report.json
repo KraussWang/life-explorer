@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "proximity label",
+    "far label hidden with mission guidance retained",
+    "drift",
+    "single collection",
+    "reload persistence",
+    "low and high quality render",
+    "side view",
+    "GLB failure fallback"
+  ],
+  "expectedFallbackStatus": 503,
+  "errors": []
+}

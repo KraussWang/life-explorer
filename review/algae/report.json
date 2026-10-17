@@ -1,0 +1,336 @@
+{
+  "errors": [],
+  "assets": [
+    {
+      "name": "filament-0-lod.glb",
+      "bytes": 9516,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "filament-0.glb",
+      "bytes": 63456,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "filament-1-lod.glb",
+      "bytes": 9516,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "filament-1.glb",
+      "bytes": 80072,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "filament-2-lod.glb",
+      "bytes": 9516,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "filament-2.glb",
+      "bytes": 96680,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "leaf-reused.glb",
+      "bytes": 48064,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "views": [
+    {
+      "view": "Main",
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 2536,
+      "drawCalls": 7,
+      "calls": 42,
+      "triangles": 8201111
+    },
+    {
+      "view": "Oblique",
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 2368,
+      "drawCalls": 7,
+      "calls": 41,
+      "triangles": 8649142
+    },
+    {
+      "view": "Side",
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 3233,
+      "drawCalls": 7,
+      "calls": 40,
+      "triangles": 9596730
+    },
+    {
+      "view": "Wide",
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 1400,
+      "drawCalls": 5,
+      "calls": 40,
+      "triangles": 6875655
+    },
+    {
+      "view": "Ground",
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 3338,
+      "drawCalls": 7,
+      "calls": 39,
+      "triangles": 9306894
+    },
+    {
+      "view": "Vent_Detail",
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 3699,
+      "drawCalls": 7,
+      "calls": 39,
+      "triangles": 9721607
+    },
+    {
+      "view": "Algae_Close",
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 1751,
+      "drawCalls": 7,
+      "calls": 29,
+      "triangles": 8014721
+    },
+    {
+      "view": "Reverse",
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 3824,
+      "drawCalls": 7,
+      "calls": 42,
+      "triangles": 10550572
+    }
+  ],
+  "stages": [
+    {
+      "growth": 0,
+      "seed": 73190,
+      "target": 0,
+      "current": 0,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 0,
+      "drawCalls": 0,
+      "calls": 35,
+      "triangles": 6435826
+    },
+    {
+      "growth": 0.3,
+      "seed": 73190,
+      "target": 0.3,
+      "current": 0.3,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 643,
+      "drawCalls": 6,
+      "calls": 41,
+      "triangles": 6890502
+    },
+    {
+      "growth": 0.6,
+      "seed": 73190,
+      "target": 0.6,
+      "current": 0.6,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 1685,
+      "drawCalls": 7,
+      "calls": 42,
+      "triangles": 7597283
+    },
+    {
+      "growth": 1,
+      "seed": 73190,
+      "target": 1,
+      "current": 1,
+      "placements": 3780,
+      "rock": 1392,
+      "leaves": 105,
+      "activeInstances": 2536,
+      "drawCalls": 7,
+      "calls": 42,
+      "triangles": 8201111
+    }
+  ],
+  "placement": {
+    "count": 3780,
+    "minDistance": 0.5801152312814055,
+    "phases": 3780,
+    "first": [
+      {
+        "position": [
+          -47.986180773866465,
+          3.012935695931673,
+          -55.3053419610461
+        ],
+        "normal": [
+          0.3548310036087591,
+          0.8863953732764279,
+          0.2973183497736776
+        ],
+        "yaw": 4.6287921637502984,
+        "scale": 1.2427233516238632,
+        "phase": 2.8409455707977402,
+        "start": 0.7847649920899045,
+        "variant": 2,
+        "surface": "rock"
+      },
+      {
+        "position": [
+          -48.7605872881147,
+          3.1274642377612167,
+          -54.54236662877559
+        ],
+        "normal": [
+          -0.5538726016203814,
+          0.8310054136233967,
+          -0.05152808654392002
+        ],
+        "yaw": 2.888077624094086,
+        "scale": 1.295447566290386,
+        "phase": 5.874407895593885,
+        "start": 0.8163671468408604,
+        "variant": 1,
+        "surface": "rock"
+      },
+      {
+        "position": [
+          -47.91891429068389,
+          3.102647094362325,
+          -53.467338571953654
+        ],
+        "normal": [
+          0.3037104173869417,
+          0.9342711180439354,
+          -0.18680861960729953
+        ],
+        "yaw": 3.9614927846012518,
+        "scale": 1.2071907418081538,
+        "phase": 0.1957813244494397,
+        "start": 0.2975671943189004,
+        "variant": 1,
+        "surface": "rock"
+      },
+      {
+        "position": [
+          -48.180494554167865,
+          3.2939205723103178,
+          -55.90089123820493
+        ],
+        "normal": [
+          -0.14719597105773483,
+          0.898350879365115,
+          0.41388288639214704
+        ],
+        "yaw": 3.6601522727879536,
+        "scale": 1.0356458064634353,
+        "phase": 5.80046760078096,
+        "start": 0.6050693092100601,
+        "variant": 0,
+        "surface": "rock"
+      },
+      {
+        "position": [
+          -48.91842680255818,
+          3.018015430032229,
+          -55.13704226129411
+        ],
+        "normal": [
+          -0.2596368122814476,
+          0.930071680030521,
+          0.2599142083717863
+        ],
+        "yaw": 5.34876343582082,
+        "scale": 0.8560837014345453,
+        "phase": 0.5492642376887661,
+        "start": 0.13255579302342083,
+        "variant": 2,
+        "surface": "rock"
+      }
+    ],
+    "clearChannel": true
+  },
+  "transition": {
+    "intermediate": 0.11750309741540454,
+    "reversing": 0.8824969025845955
+  },
+  "lowPerformance": {
+    "meanFrameMs": 7.272857142857135,
+    "seed": 73190,
+    "target": 1,
+    "current": 1,
+    "placements": 3780,
+    "rock": 1392,
+    "leaves": 105,
+    "activeInstances": 1766,
+    "drawCalls": 7,
+    "calls": 36,
+    "triangles": 5315082
+  },
+  "highPerformance": {
+    "meanFrameMs": 11.687142857142863,
+    "seed": 73190,
+    "target": 1,
+    "current": 1,
+    "placements": 3780,
+    "rock": 1392,
+    "leaves": 105,
+    "activeInstances": 2536,
+    "drawCalls": 7,
+    "calls": 42,
+    "triangles": 8201111
+  },
+  "reproducible": true
+}

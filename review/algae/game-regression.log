@@ -1,0 +1,45 @@
+PASS starts at cell
+PASS locked evolution cannot open
+PASS WASD moves player
+PASS pause freezes movement
+PASS three nutrients unlock only an opportunity
+PASS CHOOSING flagellate
+PASS input locked during flagellate
+PASS evolved flagellate
+PASS cold is not automatically triggered
+PASS cold starts on region contact
+PASS reload restores cold event
+PASS cold plus peers and resources required
+PASS CHOOSING colony
+PASS input locked during colony
+PASS evolved colony
+PASS cold ends and S02 starts
+PASS stage-specific food collected
+PASS CHOOSING worm
+PASS input locked during worm
+PASS evolved worm
+PASS worm checkpoint created
+PASS three branch cards
+PASS CHOOSING bivalve
+PASS input locked during bivalve
+PASS evolved bivalve
+PASS ending unlocked bivalve
+PASS return to worm keeps bivalve
+PASS CHOOSING slug
+PASS input locked during slug
+PASS evolved slug
+PASS ending unlocked slug
+PASS return to worm keeps slug
+PASS CHOOSING fish
+PASS input locked during fish
+PASS evolved fish
+PASS ending unlocked fish
+PASS return to worm keeps fish
+PASS all seven species discovered
+PASS checkpoint and atlas persist after reload
+PASS high quality enabled
+PASS low quality uses reduced resolution and no shadows
+PASS body stays above seafloor
+PASS restart can be cancelled
+PASS restart preserves discovered atlas
+PASS no uncaught errors

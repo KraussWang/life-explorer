@@ -1,0 +1,290 @@
+{
+  "rock": {
+    "archive": "C:\\Files\\projects\\Hackthon\\岩石5.zip",
+    "entries": [
+      {
+        "name": "base_basic_pbr.glb",
+        "bytes": 15692800
+      },
+      {
+        "name": "base_basic_shaded.glb",
+        "bytes": 6920308
+      }
+    ],
+    "gltf": {
+      "asset": {
+        "generator": "Khronos glTF Blender I/O v4.3.47",
+        "version": "2.0"
+      },
+      "extensionsUsed": null,
+      "materials": [
+        {
+          "doubleSided": true,
+          "name": "model",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "images": [
+        {
+          "bufferView": 4,
+          "mimeType": "image/png",
+          "name": "texture_normal"
+        },
+        {
+          "bufferView": 5,
+          "mimeType": "image/png",
+          "name": "texture_diffuse"
+        },
+        {
+          "bufferView": 6,
+          "mimeType": "image/png",
+          "name": "texture_metallic-texture_roughness"
+        }
+      ],
+      "textures": [
+        {
+          "sampler": 0,
+          "source": 0
+        },
+        {
+          "sampler": 0,
+          "source": 1
+        },
+        {
+          "sampler": 0,
+          "source": 2
+        }
+      ],
+      "meshes": [
+        {
+          "name": "model",
+          "primitives": [
+            {
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              },
+              "indices": 3,
+              "material": 0
+            }
+          ]
+        }
+      ],
+      "nodes": [
+        {
+          "mesh": 0,
+          "name": "model"
+        }
+      ]
+    },
+    "accessors": [
+      {
+        "bufferView": 0,
+        "componentType": 5126,
+        "count": 19209,
+        "max": [
+          0.9480609893798828,
+          0.9385640025138855,
+          0.5150970220565796
+        ],
+        "min": [
+          -0.94656902551651,
+          0,
+          -0.5104339718818665
+        ],
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 1,
+        "componentType": 5126,
+        "count": 19209,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 2,
+        "componentType": 5126,
+        "count": 19209,
+        "type": "VEC2"
+      },
+      {
+        "bufferView": 3,
+        "componentType": 5123,
+        "count": 105630,
+        "type": "SCALAR"
+      }
+    ]
+  },
+  "vent": {
+    "archive": "C:\\Files\\projects\\Hackthon\\热液喷口.zip",
+    "entries": [
+      {
+        "name": "base_basic_pbr.fbx",
+        "bytes": 13714700
+      },
+      {
+        "name": "base_basic_shaded.fbx",
+        "bytes": 6972892
+      },
+      {
+        "name": "base.fbx",
+        "bytes": 1131628
+      },
+      {
+        "name": "texture_diffuse.png",
+        "bytes": 5536398
+      },
+      {
+        "name": "texture_metallic.png",
+        "bytes": 771767
+      },
+      {
+        "name": "texture_normal.png",
+        "bytes": 4812985
+      },
+      {
+        "name": "texture_pbr.png",
+        "bytes": 2851523
+      },
+      {
+        "name": "texture_roughness.png",
+        "bytes": 1455524
+      },
+      {
+        "name": "shaded.png",
+        "bytes": 5838112
+      },
+      {
+        "name": "base_basic_pbr.glb",
+        "bytes": 14446408
+      },
+      {
+        "name": "base_basic_shaded.glb",
+        "bytes": 6781776
+      }
+    ],
+    "gltf": {
+      "asset": {
+        "generator": "Khronos glTF Blender I/O v4.3.47",
+        "version": "2.0"
+      },
+      "extensionsUsed": null,
+      "materials": [
+        {
+          "doubleSided": true,
+          "name": "model",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicRoughnessTexture": {
+              "index": 2
+            }
+          }
+        }
+      ],
+      "images": [
+        {
+          "bufferView": 4,
+          "mimeType": "image/png",
+          "name": "texture_normal"
+        },
+        {
+          "bufferView": 5,
+          "mimeType": "image/png",
+          "name": "texture_diffuse"
+        },
+        {
+          "bufferView": 6,
+          "mimeType": "image/png",
+          "name": "texture_metallic-texture_roughness"
+        }
+      ],
+      "textures": [
+        {
+          "sampler": 0,
+          "source": 0
+        },
+        {
+          "sampler": 0,
+          "source": 1
+        },
+        {
+          "sampler": 0,
+          "source": 2
+        }
+      ],
+      "meshes": [
+        {
+          "name": "model",
+          "primitives": [
+            {
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              },
+              "indices": 3,
+              "material": 0
+            }
+          ]
+        }
+      ],
+      "nodes": [
+        {
+          "mesh": 0,
+          "name": "model"
+        }
+      ]
+    },
+    "accessors": [
+      {
+        "bufferView": 0,
+        "componentType": 5126,
+        "count": 22245,
+        "max": [
+          0.9354040026664734,
+          1.3996689319610596,
+          0.4554160535335541
+        ],
+        "min": [
+          -0.9389100074768066,
+          0,
+          -0.4577469527721405
+        ],
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 1,
+        "componentType": 5126,
+        "count": 22245,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 2,
+        "componentType": 5126,
+        "count": 22245,
+        "type": "VEC2"
+      },
+      {
+        "bufferView": 3,
+        "componentType": 5123,
+        "count": 115206,
+        "type": "SCALAR"
+      }
+    ]
+  }
+}

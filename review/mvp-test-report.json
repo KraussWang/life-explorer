@@ -1,0 +1,255 @@
+{
+  "testedAt": "2026-10-17T07:14:01.653Z",
+  "checks": [
+    {
+      "name": "starts at cell",
+      "pass": true
+    },
+    {
+      "name": "locked evolution cannot open",
+      "pass": true
+    },
+    {
+      "name": "WASD moves player",
+      "pass": true
+    },
+    {
+      "name": "pause freezes movement",
+      "pass": true
+    },
+    {
+      "name": "three nutrients unlock only an opportunity",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING flagellate",
+      "pass": true
+    },
+    {
+      "name": "input locked during flagellate",
+      "pass": true
+    },
+    {
+      "name": "evolved flagellate",
+      "pass": true
+    },
+    {
+      "name": "cold is not automatically triggered",
+      "pass": true
+    },
+    {
+      "name": "cold starts on region contact",
+      "pass": true
+    },
+    {
+      "name": "reload restores cold event",
+      "pass": true
+    },
+    {
+      "name": "cold plus peers and resources required",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING colony",
+      "pass": true
+    },
+    {
+      "name": "input locked during colony",
+      "pass": true
+    },
+    {
+      "name": "evolved colony",
+      "pass": true
+    },
+    {
+      "name": "cold ends and S02 starts",
+      "pass": true
+    },
+    {
+      "name": "stage-specific food collected",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING worm",
+      "pass": true
+    },
+    {
+      "name": "input locked during worm",
+      "pass": true
+    },
+    {
+      "name": "evolved worm",
+      "pass": true
+    },
+    {
+      "name": "worm checkpoint created",
+      "pass": true
+    },
+    {
+      "name": "three branch cards",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING bivalve",
+      "pass": true
+    },
+    {
+      "name": "input locked during bivalve",
+      "pass": true
+    },
+    {
+      "name": "evolved bivalve",
+      "pass": true
+    },
+    {
+      "name": "ending unlocked bivalve",
+      "pass": true
+    },
+    {
+      "name": "return to worm keeps bivalve",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING slug",
+      "pass": true
+    },
+    {
+      "name": "input locked during slug",
+      "pass": true
+    },
+    {
+      "name": "evolved slug",
+      "pass": true
+    },
+    {
+      "name": "ending unlocked slug",
+      "pass": true
+    },
+    {
+      "name": "return to worm keeps slug",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING fish",
+      "pass": true
+    },
+    {
+      "name": "input locked during fish",
+      "pass": true
+    },
+    {
+      "name": "evolved fish",
+      "pass": true
+    },
+    {
+      "name": "ending unlocked fish",
+      "pass": true
+    },
+    {
+      "name": "return to worm keeps fish",
+      "pass": true
+    },
+    {
+      "name": "all seven species discovered",
+      "pass": true
+    },
+    {
+      "name": "checkpoint and atlas persist after reload",
+      "pass": true
+    },
+    {
+      "name": "high quality enabled",
+      "pass": true
+    },
+    {
+      "name": "low quality uses reduced resolution and no shadows",
+      "pass": true
+    },
+    {
+      "name": "body stays above seafloor",
+      "pass": true
+    },
+    {
+      "name": "restart can be cancelled",
+      "pass": true
+    },
+    {
+      "name": "restart preserves discovered atlas",
+      "pass": true
+    },
+    {
+      "name": "no uncaught errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "snapshot": {
+    "state": {
+      "version": 1,
+      "species": "cell",
+      "counts": {
+        "nutrient": 0,
+        "food": 0,
+        "specialization": 0
+      },
+      "collected": [],
+      "cold": "dormant",
+      "gathered": false,
+      "position": [
+        0,
+        5,
+        22
+      ],
+      "origin": [
+        0,
+        5,
+        22
+      ],
+      "unlocked": [
+        "cell",
+        "flagellate",
+        "colony",
+        "worm",
+        "bivalve",
+        "slug",
+        "fish"
+      ],
+      "checkpoint": null,
+      "quality": "low"
+    },
+    "phase": "EXPLORING",
+    "position": [
+      0,
+      5,
+      22
+    ],
+    "yaw": 0,
+    "paused": false,
+    "target": {
+      "type": "nutrient",
+      "position": [
+        -0.7069014390505318,
+        7.175568063860624,
+        15.463354480705307
+      ]
+    },
+    "model": "cell",
+    "facing": [
+      0,
+      0,
+      -1
+    ],
+    "cellAxis": [
+      3.4887931844689024e-16,
+      -0.004605342063470295,
+      -0.9999893953560098
+    ],
+    "drawCalls": 228,
+    "triangles": 9658501,
+    "quality": {
+      "pixelRatio": 0.8,
+      "shadows": false
+    },
+    "ground": 1.1168906196912523
+  }
+}
