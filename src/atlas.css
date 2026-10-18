@@ -1,0 +1,117 @@
+/* Isolated full-screen codex: the game HUD and scene styles are unchanged. */
+#atlas{--cyan:#77dfeb;--ink:#081e25;--muted:#8baeb7;--gold:#ffd380;font-family:"Microsoft YaHei","PingFang SC",sans-serif;color:#e7ece5;width:100vw;height:100dvh;max-width:none;max-height:none;inset:0;margin:0;padding:0;border:0;border-radius:0;overflow:hidden;background:radial-gradient(ellipse at 55% -30%,#15546580,transparent 65%),linear-gradient(#051a22ed,#03151bee),url('/atlas/ocean.webp') center/cover;box-shadow:none}
+#atlas[open]{display:grid;grid-template-rows:106px minmax(0,1fr) 54px}
+#atlas button{color:inherit;font-family:inherit}
+#atlas svg{width:32px;height:32px;flex-shrink:0}
+#atlas button:focus-visible{outline:2px solid #c1faff;outline-offset:-4px}
+.codex-header{display:flex;align-items:center;gap:28px;padding:0 26px 0 3.3vw;border-bottom:1px solid #82d1df38;background:linear-gradient(90deg,#051a24 6%,#051c2599 48%,#03161ab5 88%),url('/atlas/header.webp') center right/auto 106px no-repeat;position:relative}
+.codex-brand{font-family:"STKaiti","KaiTi","Noto Serif CJK SC",serif;font-size:clamp(28px,2.6vw,45px);font-weight:bold;color:#efd4a5;letter-spacing:6px;white-space:nowrap;line-height:1.25;text-shadow:0 2px 8px #000}
+.codex-brand small{display:block;font:13px Georgia,serif;letter-spacing:7px;color:#eed2a4;margin:8px 0 0 8px}
+.codex-heading{align-self:center;min-width:0;padding-left:24px;border-left:1px solid #8fc9d02b}
+#atlas .codex-heading h1{font-family:"STSong","SimSun",serif;font-size:clamp(25px,2.3vw,39px);letter-spacing:3px;font-weight:600;white-space:nowrap;margin:0 0 6px}
+.codex-heading h1 span{font:normal clamp(17px,1.5vw,26px) Georgia,serif;letter-spacing:0}
+.codex-heading p{margin:0;font-family:serif;font-size:14px;letter-spacing:5px;color:#9fb5ba}
+.codex-motto{margin:0 40px 0 auto;font:15px/1.8 "SimSun",serif;letter-spacing:2px;text-align:right;white-space:nowrap;color:#b3b9b5}
+#atlas .codex-close{position:absolute;right:15px;top:12px;padding:2px 5px;background:#041a2280;border:0;font-size:24px;color:#9cbac2}
+.codex-close kbd{font-size:9px;vertical-align:middle}
+.codex-body{display:grid;grid-template-columns:232px minmax(0,1fr) minmax(335px,27.5%);gap:22px;min-height:0;padding:18px 22px 16px 9px}
+.codex-sidebar{position:relative;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(0deg,transparent,#03182000 30%),url('/atlas/fossil.webp') left bottom/100% auto no-repeat;min-height:0;padding-bottom:120px}
+#atlas .codex-section{width:100%;height:95px;display:flex;align-items:center;gap:16px;padding:16px 20px;border:0;border-bottom:1px solid #58a7bc55;border-radius:0;text-align:left;background:transparent;position:relative}
+#atlas .codex-section svg{width:53px;height:53px;color:#91cadd;filter:drop-shadow(0 0 6px #65bedb30)}
+.codex-section strong{font-family:"SimSun",serif;font-size:21px;letter-spacing:2px;font-weight:600;white-space:nowrap}
+.codex-section small{display:block;color:#729caa;font-size:12px;letter-spacing:1px;margin-top:6px;white-space:nowrap}
+#atlas .codex-section[aria-pressed="true"]{background:linear-gradient(110deg,#15445599,#15445522);border:1px solid #439bb149;border-radius:5px;box-shadow:inset 0 0 20px #72dcea10}
+.codex-section[aria-pressed="true"]:before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:#7bf1fa;box-shadow:0 0 12px #57d9e9}
+.codex-collection{padding:25px 18px 0 22px;color:#adc1c4;font-family:"SimSun",serif}
+.codex-collection>span{font-size:17px}
+#atlas-count{font:27px Georgia,serif;letter-spacing:2px;margin:4px 0 10px;color:#b8cbd2}
+#atlas-count b{font-size:42px;color:#f7f3df;font-weight:normal}
+.codex-meter{height:9px;border-radius:9px;background:#03171e;border:1px solid #639da975;overflow:hidden}
+.codex-meter i{display:block;height:100%;background:linear-gradient(90deg,#228f9f,#91edf0);box-shadow:0 0 8px #68dae5;transition:width .3s}
+.codex-collection p{font-size:15px;letter-spacing:2px;line-height:1.7;margin:20px 0 0;color:#899d9e}
+.codex-center{min-width:0;min-height:0;display:flex;flex-direction:column}
+.codex-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:3px 0 20px;min-height:41px}
+#atlas-tabs,.codex-status{display:flex;gap:9px;align-items:center}
+#atlas .codex-toolbar button{height:41px;border-radius:24px;border:1px solid #5292a14a;background:#09212b66;padding:6px 23px;font-family:"SimSun",serif;font-size:17px;white-space:nowrap;display:flex;align-items:center;gap:9px;justify-content:center;min-width:100px}
+#atlas .codex-toolbar button svg{width:25px;height:25px}
+#atlas .codex-toolbar button[aria-pressed="true"]{background:radial-gradient(ellipse at bottom,#2a7a8d,#0c303b);border-color:#87e2e9;box-shadow:0 0 9px #69e6f355,inset 0 0 8px #80dbe744;color:#eaffff;text-shadow:0 0 5px #b9f6ff77}
+#atlas .codex-status{gap:0;border:1px solid #4c85914a;border-radius:30px}
+#atlas .codex-status button{border-color:transparent;min-width:82px;padding:6px 14px;font-size:15px;height:39px}
+#atlas .codex-status button[data-status="all"]{font-size:11px;min-width:55px;padding:6px 8px;color:#8fb6c0}
+#atlas-list.codex-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:calc((100dvh - 290px)/3);gap:15px;min-height:0;overflow-y:auto;overflow-x:hidden;padding:2px 3px 5px 1px;align-content:start;scrollbar-width:thin;scrollbar-color:#315d68 #061b22;flex:1}
+#atlas .codex-card{position:relative;display:block;min-width:0;min-height:176px;overflow:hidden;text-align:left;padding:0;border:1px solid #7ba5a28f;border-radius:9px;background:linear-gradient(0deg,#03181d 0%,#09242b00 65%),radial-gradient(ellipse at 50% 28%,#2a788951,#08252b40),url('/atlas/ocean.webp') center/auto 100%;isolation:isolate;transition:border-color .15s,box-shadow .15s;box-shadow:inset 0 0 0 3px #00212b66}
+#atlas .codex-card:nth-child(3n+2){background-position:0 0,0 0,65% center}
+#atlas .codex-card.rare{border-color:#74b6dc99}
+#atlas .codex-card.key{border-color:#aa9a65}
+#atlas .codex-card.selected{border:2px solid #fff2c7;box-shadow:0 0 7px 2px #ffcb7599,inset 0 0 9px #ffd88744}
+#atlas .codex-card:hover{border-color:#abf4f8;box-shadow:0 0 10px #60ccdb55}
+.card-flourish{position:absolute;top:7px;left:9px;font-size:16px;color:#a6e2d4;opacity:.7}
+.key .card-flourish{color:#ffdc84}
+.card-emblem{position:absolute;top:8px;right:8px;display:grid;place-items:center;width:31px;height:31px;border:1px solid #b8d6cb;border-radius:50%;color:#c2e6e5;background:#082b33a6;z-index:2}
+#atlas .card-emblem svg{width:25px;height:25px}
+.card-organism{position:absolute;width:100%;height:74%;top:3%;left:0;object-fit:contain;padding:10px 5px 0;filter:drop-shadow(0 5px 8px #001418);z-index:1;transition:transform .3s}
+.codex-card:hover .card-organism{transform:scale(1.035)}
+.card-caption{position:absolute;inset:auto 0 0;padding:32px 10px 11px;background:linear-gradient(transparent,#04181ee8 38%);z-index:3}
+.card-caption strong{display:block;font-family:"SimSun",serif;font-size:clamp(14px,1.12vw,20px);font-weight:600;white-space:nowrap;text-shadow:0 2px 5px #000;letter-spacing:.3px;margin-bottom:8px}
+.card-meta{display:flex;align-items:center;justify-content:space-between;gap:3px}
+.card-meta small{font-size:11px;white-space:nowrap;border:1px solid #80b6b47a;background:#24525466;border-radius:15px;padding:0 8px;color:#acd3cf;line-height:1.8}
+.rarity{--gem:#9aebba;color:var(--gem);font-size:12px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.rare .rarity,.rarity.rare{--gem:#84bbff}.key .rarity,.rarity.key{--gem:#ffd16c}
+.rarity i{display:inline-block;width:8px;height:8px;transform:rotate(45deg);background:linear-gradient(135deg,#f4fff2 5%,var(--gem) 45%,#5d837e);border:1px solid var(--gem);box-shadow:0 0 7px color-mix(in srgb,var(--gem),transparent 40%)}
+#atlas .codex-card.locked{border-color:#4d697580;background-blend-mode:normal,normal,luminosity}
+.locked .card-organism{filter:brightness(.12) saturate(0);opacity:.8}
+.locked .card-caption{color:#9aaeb3}.locked .card-emblem,.locked .card-flourish{opacity:.2}.locked .rarity{color:#6d8994;font-size:10px}.locked .rarity i{display:none}.locked .card-meta small{background:#0f252a;border-color:#42616a55;color:#91a2a6}
+.card-lock{position:absolute;top:43%;left:50%;transform:translate(-50%,-20%);z-index:2;color:#a5b6be;filter:drop-shadow(0 1px 6px #000)}
+#atlas .card-lock svg{width:37px;height:37px;fill:#9bb0b126;stroke-width:2.5}
+.codex-detail{border:1px solid #92b8b3aa;border-radius:15px 3px 15px 3px;padding:17px 21px 16px;position:relative;min-height:0;display:flex;flex-direction:column;background:linear-gradient(145deg,#0b2931bc,#05171bdb);box-shadow:inset 0 0 0 4px #36515a29}
+.codex-detail:before,.codex-detail:after{content:'◇';position:absolute;font-size:23px;color:#8eafb1;left:-5px;top:-11px}
+.codex-detail:after{left:auto;top:auto;bottom:-11px;right:-5px}
+#atlas-description{padding:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#2f5964 transparent;flex:1}
+.detail-category{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:27px;border-bottom:1px solid #51818c33;padding-bottom:7px}
+.detail-category>span:first-child{color:#6bd9ea;display:flex;align-items:center;gap:6px;font-size:15px}
+#atlas .detail-category svg{width:23px;height:23px}
+#atlas .detail-category .rarity{font-size:15px;letter-spacing:1px}
+#atlas .codex-detail h2{font:600 clamp(28px,2.35vw,42px)/1.2 "SimSun",serif;letter-spacing:4px;margin:9px 0 0}
+#atlas-description .latin{font:italic 19px Georgia,serif;color:#a8b9bf;margin:3px 0 8px}
+.specimen-board{display:grid;grid-template-columns:55% 45%;height:clamp(200px,27vh,280px);position:relative;background:linear-gradient(#5b9baa0c 1px,transparent 1px),linear-gradient(90deg,#5b9baa0c 1px,transparent 1px);background-size:26px 26px;border-bottom:1px solid #6aa3af33}
+.specimen-board figure{margin:0;display:flex;flex-direction:column;min-height:0;align-items:center;justify-content:center}
+.specimen-board img{width:100%;height:calc(100% - 22px);object-fit:contain;min-height:0;filter:drop-shadow(0 5px 5px #0006);padding:4px}
+.specimen-board figcaption{font-family:"SimSun",serif;font-size:14px;color:#c5d1d0;text-align:center;height:22px;line-height:22px}
+.specimen-main{border-left:1px solid #a7bec27a;margin:12px 2px 0!important;position:relative}
+.specimen-main:before,.specimen-main:after{content:'';position:absolute;width:11px;height:1px;background:#afc5c6;left:-6px;top:0}.specimen-main:after{top:auto;bottom:23px}
+.specimen-other{display:grid;grid-auto-rows:1fr;min-height:0;padding-left:6px}
+.specimen-source{font-size:9px;letter-spacing:1px;color:#587d87;text-align:right;padding:5px 0}
+#atlas-description .codex-facts{display:grid;grid-template-columns:31% 69%;gap:0;margin:4px 0 9px;font-size:clamp(11px,.92vw,15px);line-height:1.65}
+.codex-facts dt,.codex-facts dd{margin:0;padding:9px 0;border-bottom:1px solid #749ca71b}
+.codex-facts dt{color:#9dc9d8;white-space:nowrap}.codex-facts dd{color:#d4dfdc}
+#atlas .codex-model-button{width:100%;margin-top:10px;min-height:62px;flex-shrink:0;display:flex;align-items:center;justify-content:center;gap:22px;border:1px solid #76d1eb;border-radius:10px 2px 10px 2px;background:linear-gradient(130deg,#17425180,#16485a77);box-shadow:inset 0 0 14px #4094b135;font:600 19px "SimSun",serif;letter-spacing:2px;color:#e2f5f7}
+.codex-model-button small{display:block;font:10px Georgia,serif;color:#a1dbee;letter-spacing:1px;margin-top:5px}
+#atlas .codex-model-button svg{width:38px;height:38px;filter:drop-shadow(0 0 7px #71d8ed)}
+.specimen-board.locked img{filter:brightness(.09) saturate(0);opacity:.55}.specimen-seal{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:9px;font-size:15px;color:#adc1c7}
+.codex-footer{display:flex;align-items:center;gap:25px;padding:0 35px 0 264px;border-top:1px solid #4d94a52a;background:#03161b88;color:#74909b;font-size:12px}
+.codex-legend{display:flex;gap:35px}.codex-legend .rarity{font-size:14px;letter-spacing:1px}.codex-legend .rarity i{width:11px;height:11px}.codex-tip{margin-left:auto}.codex-footer small{font-size:8px;letter-spacing:3px;white-space:nowrap}.codex-footer #atlas-result-count{font-size:10px;white-space:nowrap}
+.codex-empty{grid-column:1/-1;text-align:center;align-self:center;padding:80px 10px;color:#87b1bd}.codex-empty>span{font-size:50px}.codex-empty h3{font:24px serif;margin-top:18px}
+#atlas-statistics{overflow-y:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-content:start;padding:20px 2px}
+.stats-intro{grid-column:1/-1;padding:40px 20px;border-bottom:1px solid #39636f;margin-bottom:20px}.stats-intro>span{font:11px Georgia;letter-spacing:5px;color:#93b7bd}.stats-intro h3{font:26px serif;margin-top:20px}.stats-intro p{font-size:13px}
+#atlas-statistics article{padding:22px 15px;border:1px solid #5e8e9a77;background:#14343e88;border-radius:8px}#atlas-statistics article svg{width:50px;height:50px;color:#8ed0df}#atlas-statistics h3{font:19px serif}#atlas-statistics b{font:40px Georgia;color:#f4e1b6}#atlas-statistics .codex-meter{margin-top:20px}
+#atlas-model{width:min(940px,94vw);max-height:94dvh;background:linear-gradient(145deg,#0c2d38,#04151e);border-color:#69afc6;padding:26px}.codex-model-dialog h2{font:30px "SimSun",serif;margin:8px 0}.model-stage{height:min(58vh,540px);position:relative;background:radial-gradient(ellipse,#1b4e5c66,transparent 70%),linear-gradient(#97d4e009 1px,transparent 1px),linear-gradient(90deg,#97d4e009 1px,transparent 1px);background-size:auto,32px 32px,32px 32px;border:1px solid #6d9cac44;border-radius:8px;margin:18px 0}.model-stage #preview{width:100%;height:100%}#model-retry{position:absolute;bottom:20%;left:50%;transform:translateX(-50%)}.model-tools{display:flex;gap:16px;align-items:center;color:#8fb3c0;font-size:12px}.model-tools>span{margin-right:auto}.model-tools select{background:#0c2934;color:#cbe4eb;padding:8px;border:1px solid #50818f;border-radius:5px}.model-tools button{padding:8px 14px}
+@media(min-width:1800px){.codex-body{grid-template-columns:260px minmax(0,1fr) 27.5%;gap:26px}.codex-card .card-caption strong{font-size:21px}.codex-card .card-meta small,.codex-card .rarity{font-size:13px}}
+@media(max-width:1450px){.codex-body{grid-template-columns:185px minmax(0,1fr) 29%;gap:15px;padding-right:16px}.codex-brand{letter-spacing:3px}.codex-brand small{font-size:10px;letter-spacing:5px}.codex-header{gap:20px}.codex-heading{padding-left:18px}.codex-motto{font-size:12px}.codex-section strong{font-size:18px}#atlas .codex-section{padding:13px 12px;gap:10px}#atlas .codex-section svg{width:43px;height:43px}.codex-section small{font-size:10px}.codex-collection{padding-left:16px}#atlas-list.codex-grid{gap:10px}#atlas .codex-toolbar button{min-width:74px;padding:6px 12px;font-size:15px}#atlas .codex-status button{min-width:60px;padding:6px 8px;font-size:13px}#atlas-tabs{gap:6px}.codex-detail{padding:14px}.card-caption{padding:26px 7px 9px}.card-meta{flex-wrap:wrap;row-gap:4px}.card-meta small{font-size:10px;padding:0 6px}.rarity{font-size:10px;gap:4px}.codex-footer{padding-left:210px;gap:15px}.codex-legend{gap:22px}.codex-tip{font-size:10px}.codex-footer small{display:none}}
+@media(max-height:780px) and (min-width:1000px){#atlas[open]{grid-template-rows:85px minmax(0,1fr) 40px}.codex-header{background-size:auto,auto 85px}.codex-brand{font-size:30px}.codex-heading p{font-size:11px}.codex-body{padding-top:13px;padding-bottom:12px}.codex-toolbar{margin-bottom:13px}#atlas-list.codex-grid{grid-auto-rows:calc((100dvh - 230px)/3)}#atlas .codex-card{min-height:155px}#atlas .codex-section{height:76px}.codex-sidebar{padding-bottom:92px}.codex-collection p{font-size:12px;margin-top:14px}.codex-collection{padding-top:10px}#atlas-count b{font-size:34px}.specimen-board{height:180px}.codex-facts dt,.codex-facts dd{padding:6px 0}#atlas .codex-model-button{min-height:52px;font-size:17px}#atlas .codex-detail h2{font-size:31px}#atlas-description .latin{font-size:15px}}
+@media(max-width:1100px){.codex-body{grid-template-columns:155px minmax(0,1fr) 31%;gap:12px}.codex-motto{display:none}.codex-section strong{font-size:16px}#atlas .codex-section svg{width:32px;height:32px}.codex-section small{letter-spacing:0}#atlas-list.codex-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.codex-toolbar{flex-wrap:wrap;gap:9px}.codex-footer{padding-left:180px}.codex-tip{display:none}.detail-category{flex-wrap:wrap}.codex-collection p{letter-spacing:0}.codex-detail{padding:12px}}
+@media(max-width:760px){#atlas[open]{grid-template-rows:90px minmax(0,1fr) 36px}.codex-header{padding:0 15px;gap:15px}.codex-brand{font-size:22px;letter-spacing:2px}.codex-brand small{font-size:7px;letter-spacing:2px}.codex-heading{border:0;padding:0}#atlas .codex-heading h1{font-size:24px;letter-spacing:2px}.codex-heading h1 span{display:none}.codex-heading p{font-size:9px;letter-spacing:1px}.codex-motto{display:none}.codex-body{display:grid;grid-template-columns:minmax(0,1fr);overflow-y:auto;gap:14px;padding:9px 12px 16px}.codex-sidebar{padding:0;background:none;display:block}#atlas-sidebar{display:flex;gap:4px}#atlas .codex-section{height:48px;padding:6px;justify-content:center;gap:4px}#atlas .codex-section svg{width:23px;height:23px}.codex-section strong{font-family:inherit;font-size:11px;letter-spacing:0}.codex-section small{display:none}.codex-collection{display:flex;gap:8px;align-items:center;padding:10px 3px 0;font:11px sans-serif}.codex-collection p{display:none}#atlas-count{font:12px Georgia;margin:0}#atlas-count b{font-size:18px}.codex-collection .codex-meter{height:5px;flex:1}.codex-center{display:block}.codex-toolbar{margin:5px 0 12px;gap:9px}.codex-status{margin-left:auto}#atlas .codex-toolbar button{height:32px;min-width:57px;padding:3px 9px;font-size:12px}#atlas .codex-toolbar button svg{width:20px;height:20px}#atlas .codex-status button{height:31px;min-width:55px;font-size:11px}#atlas-list.codex-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:190px;max-height:415px;gap:9px}#atlas .codex-card{min-height:0}.card-caption strong{font-size:14px}.card-meta{display:block}.card-meta small{display:inline-block}.card-meta .rarity{display:flex;margin-top:3px}.card-emblem{width:25px;height:25px;right:5px;top:5px}#atlas .card-emblem svg{width:21px;height:21px}.codex-detail{min-height:0;display:block;padding:16px}#atlas-description{overflow:visible}.specimen-board{height:240px}.codex-detail .codex-facts{font-size:13px!important}.codex-facts dt,.codex-facts dd{padding:9px 0}#atlas .codex-detail h2{font-size:34px}.codex-footer{padding:0 15px;justify-content:space-between}.codex-legend{gap:23px}.codex-legend .rarity{font-size:11px}.codex-model-dialog .model-tools{flex-wrap:wrap}.model-tools>span{width:100%}#atlas-model{padding:17px}.model-stage{height:48vh}.stats-intro{padding:10px}.stats-intro h3{font-size:20px}#atlas-statistics{gap:8px}#atlas-statistics article{padding:12px 8px}#atlas-statistics h3{font-size:14px}}
+
+/* Keep every detail row visible at the reference desktop size. */
+@media(min-width:1101px){.codex-facts dt,.codex-facts dd{padding:6px 0}.specimen-board{height:clamp(175px,25vh,250px)}}
+@media(max-width:760px){.codex-body{display:block}.codex-center{margin:12px 0 18px}.codex-detail{margin-top:18px;background:#08212af5}.codex-sidebar{min-height:auto}}
+/* Blend the reference ornament into the sea, rather than displaying a tile. */
+.codex-sidebar{background:none}
+.codex-sidebar:after{content:'';position:absolute;inset:auto 0 0 -9px;height:210px;pointer-events:none;background:url('/atlas/fossil.webp') bottom left/100% auto no-repeat;mask-image:linear-gradient(0deg,#000 38%,transparent 90%),linear-gradient(90deg,#000 65%,transparent);mask-composite:intersect}
+.codex-sidebar>div{position:relative;z-index:1}
+#atlas .codex-card:nth-child(5n+1){background-size:auto,auto,auto 145%;background-position:center,center,20% 65%}
+#atlas .codex-card:nth-child(5n+2){background-size:auto,auto,auto 180%;background-position:center,center,75% 90%}
+#atlas .codex-card:nth-child(5n+3){background-size:auto,auto,auto 125%;background-position:center,center,5% 25%}
+#atlas .codex-card:nth-child(5n+4){background-size:auto,auto,auto 165%;background-position:center,center,90% 60%}
+.specimen-other:has(figure:nth-child(3)){grid-template-columns:1fr 1fr;grid-template-rows:58% 42%;gap:3px}
+.specimen-other:has(figure:nth-child(3)) figure:first-child{grid-column:1/-1}
+@media(max-width:760px){.codex-sidebar:after{display:none}}

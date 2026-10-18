@@ -1,0 +1,229 @@
+{
+  "checks": [
+    {
+      "name": "starts at cell",
+      "pass": true
+    },
+    {
+      "name": "locked evolution cannot open",
+      "pass": true
+    },
+    {
+      "name": "WASD moves player",
+      "pass": true
+    },
+    {
+      "name": "pause freezes movement",
+      "pass": true
+    },
+    {
+      "name": "three nutrients unlock only an opportunity",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING flagellate",
+      "pass": true
+    },
+    {
+      "name": "input locked during flagellate",
+      "pass": true
+    },
+    {
+      "name": "evolved flagellate",
+      "pass": true
+    },
+    {
+      "name": "cold is not automatically triggered",
+      "pass": true
+    },
+    {
+      "name": "cold starts on region contact",
+      "pass": true
+    },
+    {
+      "name": "reload restores cold event",
+      "pass": true
+    },
+    {
+      "name": "cold plus peers and resources required",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING colony",
+      "pass": true
+    },
+    {
+      "name": "input locked during colony",
+      "pass": true
+    },
+    {
+      "name": "evolved colony",
+      "pass": true
+    },
+    {
+      "name": "cold ends and S02 starts",
+      "pass": true
+    },
+    {
+      "name": "stage-specific food collected",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING worm",
+      "pass": true
+    },
+    {
+      "name": "input locked during worm",
+      "pass": true
+    },
+    {
+      "name": "evolved worm",
+      "pass": true
+    },
+    {
+      "name": "worm checkpoint created",
+      "pass": true
+    },
+    {
+      "name": "three branch cards",
+      "pass": true
+    },
+    {
+      "name": "failed habitat load keeps worm state",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING bivalve",
+      "pass": true
+    },
+    {
+      "name": "input locked during bivalve",
+      "pass": true
+    },
+    {
+      "name": "evolved bivalve",
+      "pass": true
+    },
+    {
+      "name": "ending unlocked bivalve",
+      "pass": true
+    },
+    {
+      "name": "scallop habitat is active",
+      "pass": true
+    },
+    {
+      "name": "scallop scene is unobscured",
+      "pass": true
+    },
+    {
+      "name": "scallop spawns on sand",
+      "pass": true
+    },
+    {
+      "name": "scallop controls describe sand movement",
+      "pass": true
+    },
+    {
+      "name": "scallop walks along sloped sand",
+      "pass": true
+    },
+    {
+      "name": "scallop camera remains above sand",
+      "pass": true
+    },
+    {
+      "name": "scallop cannot rise or dive",
+      "pass": true
+    },
+    {
+      "name": "scallop high quality",
+      "pass": true
+    },
+    {
+      "name": "scallop low quality",
+      "pass": true
+    },
+    {
+      "name": "elevated scallop save reloads on sand",
+      "pass": true
+    },
+    {
+      "name": "return to worm keeps bivalve",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING slug",
+      "pass": true
+    },
+    {
+      "name": "input locked during slug",
+      "pass": true
+    },
+    {
+      "name": "evolved slug",
+      "pass": true
+    },
+    {
+      "name": "ending unlocked slug",
+      "pass": true
+    },
+    {
+      "name": "return to worm keeps slug",
+      "pass": true
+    },
+    {
+      "name": "CHOOSING fish",
+      "pass": true
+    },
+    {
+      "name": "input locked during fish",
+      "pass": true
+    },
+    {
+      "name": "evolved fish",
+      "pass": true
+    },
+    {
+      "name": "ending unlocked fish",
+      "pass": true
+    },
+    {
+      "name": "return to worm keeps fish",
+      "pass": true
+    },
+    {
+      "name": "all seven species discovered",
+      "pass": true
+    },
+    {
+      "name": "checkpoint and atlas persist after reload",
+      "pass": true
+    },
+    {
+      "name": "high quality enabled",
+      "pass": true
+    },
+    {
+      "name": "low quality uses reduced resolution and no shadows",
+      "pass": true
+    },
+    {
+      "name": "body stays above seafloor",
+      "pass": true
+    },
+    {
+      "name": "restart can be cancelled",
+      "pass": true
+    },
+    {
+      "name": "restart preserves discovered atlas",
+      "pass": true
+    },
+    {
+      "name": "no uncaught errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "name": "25 actual catalog entries",
+      "pass": true
+    },
+    {
+      "name": "detail has only the model action",
+      "pass": true
+    },
+    {
+      "name": "four cropped scallop views",
+      "pass": true
+    },
+    {
+      "name": "atlas freezes gameplay",
+      "pass": true
+    },
+    {
+      "name": "rigged scallop loaded",
+      "pass": true
+    },
+    {
+      "name": "Escape closes viewer and keeps atlas",
+      "pass": true
+    },
+    {
+      "name": "reopen real model cell",
+      "pass": true
+    },
+    {
+      "name": "reopen real model flagellate",
+      "pass": true
+    },
+    {
+      "name": "reopen real model colony",
+      "pass": true
+    },
+    {
+      "name": "reopen real model worm",
+      "pass": true
+    },
+    {
+      "name": "reopen real model slug",
+      "pass": true
+    },
+    {
+      "name": "reopen real model fish",
+      "pass": true
+    },
+    {
+      "name": "plant filter",
+      "pass": true
+    },
+    {
+      "name": "locked plant filter",
+      "pass": true
+    },
+    {
+      "name": "locked model blocked",
+      "pass": true
+    },
+    {
+      "name": "statistics present",
+      "pass": true
+    },
+    {
+      "name": "desktop no outer horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "controls resume after atlas",
+      "pass": true
+    },
+    {
+      "name": "discoveries survive reload",
+      "pass": true
+    },
+    {
+      "name": "actual habitat contact unlocks and immediately saves fanweed",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

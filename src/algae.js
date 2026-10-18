@@ -159,7 +159,7 @@ export async function createAlgae({scene, source, groundHeight, emitters, growth
     lastCamera.copy(camera.position);lodTimer=0;
   }
   return {
-    group,placements,
+    group,placements,leaves,
     set algaeGrowth(value){if(!Number.isFinite(value))throw new TypeError('algaeGrowth must be finite');target=THREE.MathUtils.clamp(value,0,1);},
     get algaeGrowth(){return target;},get currentGrowth(){return growth.value;},
     setQuality(value){high=value;lodTimer=Infinity;},

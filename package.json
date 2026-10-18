@@ -7,9 +7,10 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test scripts/state.test.mjs scripts/organic-floc.test.mjs scripts/algae.test.mjs",
+    "test": "node --test scripts/state.test.mjs scripts/organic-floc.test.mjs scripts/algae.test.mjs scripts/catalog.test.mjs",
     "test:algae": "node scripts/check-algae.mjs",
-    "test:e2e": "node scripts/test-mvp.mjs"
+    "test:e2e": "node scripts/test-mvp.mjs",
+    "test:atlas": "node scripts/test-atlas.mjs"
   },
   "dependencies": {
     "three": "0.186.1"

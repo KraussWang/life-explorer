@@ -2,3 +2,4 @@ node_modules/
 dist/
 *.blend1
 review/*.log
+assets/atlas-source/

@@ -1,0 +1,17 @@
+<!doctype html><html><body style="margin:0;background:#12313e"><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {catalog} from '/src/catalog.js';
+import {normalizeCatalogModel,disposeCatalogObject} from '/src/atlas-viewer.js';
+const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,preserveDrawingBuffer:true});renderer.setSize(600,600);renderer.setPixelRatio(1);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;document.body.append(renderer.domElement);
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(33,1,.01,100);
+scene.add(new THREE.HemisphereLight(0xf0fbff,0x73877b,2.6));const key=new THREE.DirectionalLight(0xffedda,3);key.position.set(4,6,5);scene.add(key);const rim=new THREE.DirectionalLight(0x9bcfff,2);rim.position.set(-4,2,-3);scene.add(rim);
+window.catalog=catalog;
+window.renderEntry=async id=>{const entry=catalog.find(e=>e.id===id);const gltf=await new GLTFLoader().loadAsync(entry.model),object=normalizeCatalogModel(gltf.scene);scene.add(object);const result=[];
+ for(const [i,p] of [[0,[0,0,6.6]],[1,[6.6,0,0]],[2,[0,0,-6.6]],[3,[0,6.6,.0001]]]){camera.position.set(...p);camera.up.set(0,1,0);camera.lookAt(0,0,0);renderer.render(scene,camera);
+  const copy=document.createElement('canvas');copy.width=copy.height=600;const ctx=copy.getContext('2d');ctx.drawImage(renderer.domElement,0,0);const pixels=ctx.getImageData(0,0,600,600).data;let x0=600,y0=600,x1=0,y1=0;
+  for(let y=0;y<600;y++)for(let x=0;x<600;x++)if(pixels[(y*600+x)*4+3]>0){x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);}
+  const crop=document.createElement('canvas');crop.width=x1-x0+21;crop.height=y1-y0+21;crop.getContext('2d').drawImage(copy,x0,y0,x1-x0+1,y1-y0+1,10,10,x1-x0+1,y1-y0+1);result.push(crop.toDataURL('image/webp',.94));}
+ scene.remove(object);disposeCatalogObject(object);return result;
+};window.ready=true;
+</script></body></html>

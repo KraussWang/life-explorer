@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-10-17T07:14:01.653Z",
+  "testedAt": "2026-10-17T12:52:22.461Z",
   "checks": [
     {
       "name": "starts at cell",
@@ -90,6 +90,10 @@
       "pass": true
     },
     {
+      "name": "failed habitat load keeps worm state",
+      "pass": true
+    },
+    {
       "name": "CHOOSING bivalve",
       "pass": true
     },
@@ -103,6 +107,30 @@
     },
     {
       "name": "ending unlocked bivalve",
+      "pass": true
+    },
+    {
+      "name": "scallop habitat is active",
+      "pass": true
+    },
+    {
+      "name": "scallop scene is unobscured",
+      "pass": true
+    },
+    {
+      "name": "scallop can swim and stays above its ground",
+      "pass": true
+    },
+    {
+      "name": "scallop high quality",
+      "pass": true
+    },
+    {
+      "name": "scallop low quality",
+      "pass": true
+    },
+    {
+      "name": "scallop save reloads in habitat",
       "pass": true
     },
     {
@@ -179,10 +207,13 @@
     },
     {
       "name": "no uncaught errors",
-      "pass": true
+      "pass": false
     }
   ],
-  "errors": [],
+  "errors": [
+    "Failed to load resource: net::ERR_FAILED",
+    "no uncaught errors"
+  ],
   "snapshot": {
     "state": {
       "version": 1,
@@ -205,6 +236,7 @@
         5,
         22
       ],
+      "positionSpace": "primordial",
       "unlocked": [
         "cell",
         "flagellate",
@@ -218,6 +250,7 @@
       "quality": "low"
     },
     "phase": "EXPLORING",
+    "environment": "primordial",
     "position": [
       0,
       5,
@@ -228,9 +261,9 @@
     "target": {
       "type": "nutrient",
       "position": [
-        -0.7069014390505318,
-        7.175568063860624,
-        15.463354480705307
+        -0.6801101816814569,
+        7.196927838457128,
+        15.454245530485327
       ]
     },
     "model": "cell",
@@ -240,12 +273,12 @@
       -1
     ],
     "cellAxis": [
-      3.4887931844689024e-16,
-      -0.004605342063470295,
-      -0.9999893953560098
+      3.946322266093049e-16,
+      0.0036662364020307184,
+      -0.9999932793327386
     ],
     "drawCalls": 228,
-    "triangles": 9658501,
+    "triangles": 8899013,
     "quality": {
       "pixelRatio": 0.8,
       "shadows": false

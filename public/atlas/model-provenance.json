@@ -1,0 +1,114 @@
+[
+  {
+    "id": "lungfish",
+    "source": "视觉效果\\3D资产\\非洲肺鱼模型\\base_basic_pbr.glb",
+    "before": 2000000,
+    "after": 60000,
+    "bytes": 5013656
+  },
+  {
+    "id": "amphibian",
+    "source": "视觉效果\\3D资产\\两栖动物模型\\base_basic_pbr.glb",
+    "before": 90630,
+    "after": 60000,
+    "bytes": 5415016
+  },
+  {
+    "id": "tyrannosaur",
+    "source": "primordial-ocean\\assets\\atlas-source\\tyrannosaur\\base_basic_pbr.glb",
+    "before": 89139,
+    "after": 59999,
+    "bytes": 5320848
+  },
+  {
+    "id": "elephant",
+    "source": "primordial-ocean\\assets\\atlas-source\\elephant\\base_basic_pbr.glb",
+    "before": 1800000,
+    "after": 59999,
+    "bytes": 7206428
+  },
+  {
+    "id": "shrub",
+    "source": "primordial-ocean\\assets\\atlas-source\\shrub\\base.obj",
+    "before": 1000000,
+    "after": 60000,
+    "bytes": 3605320
+  },
+  {
+    "id": "bush",
+    "source": "primordial-ocean\\assets\\atlas-source\\bush\\base_basic_pbr.glb",
+    "before": 1999986,
+    "after": 60000,
+    "bytes": 7982228
+  },
+  {
+    "id": "tree",
+    "source": "primordial-ocean\\assets\\atlas-source\\tree\\base_basic_pbr.glb",
+    "before": 1000000,
+    "after": 60000,
+    "bytes": 9033040
+  },
+  {
+    "id": "coral-tube",
+    "source": "primordial-ocean\\assets\\atlas-source\\coral-tube\\base.obj",
+    "before": 500000,
+    "after": 60000,
+    "bytes": 3507160
+  },
+  {
+    "id": "coral-mass",
+    "source": "primordial-ocean\\assets\\atlas-source\\coral-mass\\base.obj",
+    "before": 1800000,
+    "after": 60000,
+    "bytes": 3347420
+  },
+  {
+    "id": "chordate",
+    "source": "primordial-ocean\\assets\\atlas-source\\chordate\\base_basic_pbr.glb",
+    "before": 89660,
+    "after": 60000,
+    "bytes": 5523724
+  },
+  {
+    "id": "finfish",
+    "source": "primordial-ocean\\assets\\atlas-source\\finfish\\base_basic_pbr.glb",
+    "before": 88376,
+    "after": 60000,
+    "bytes": 5514256
+  },
+  {
+    "id": "fanweed",
+    "source": "primordial-ocean\\assets\\atlas-source\\fanweed\\base_high_pbr.glb",
+    "before": 88728,
+    "after": 59999,
+    "bytes": 5628440
+  },
+  {
+    "id": "fish-rig",
+    "source": "primordial-ocean\\assets\\atlas-source\\fish-rig.glb",
+    "before": 2000080,
+    "after": 59999,
+    "bytes": 5834016
+  },
+  {
+    "id": "whale",
+    "source": "primordial-ocean\\assets\\atlas-source\\whale.glb",
+    "before": 92655,
+    "after": 59998,
+    "bytes": 5735516
+  },
+  {
+    "id": "bivalve-rig",
+    "source": "primordial-ocean\\assets\\atlas-source\\bivalve-rig.glb",
+    "before": 87800,
+    "after": 59998,
+    "bytes": 6459492
+  },
+  {
+    "id": "finfish-rig",
+    "source": "primordial-ocean\\assets\\atlas-source\\finfish-rig.glb",
+    "before": 88456,
+    "after": 59998,
+    "bytes": 6244944
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "name": "all 25 cards",
+      "pass": true
+    },
+    {
+      "name": "mobile detail action reachable",
+      "pass": true,
+      "box": {
+        "x": 29,
+        "y": 710.859375,
+        "width": 332,
+        "height": 64
+      }
+    },
+    {
+      "name": "mobile true model loads",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint lungfish",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint amphibian",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint chordate",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint finfish",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint whale",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint coral-tube",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint coral-mass",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint shrub",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint bush",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint tree",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint tyrannosaur",
+      "pass": true
+    },
+    {
+      "name": "future chapter hint elephant",
+      "pass": true
+    },
+    {
+      "name": "marine category filter",
+      "pass": true
+    },
+    {
+      "name": "combined marine/unlocked filter",
+      "pass": true
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

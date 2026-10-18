@@ -1,0 +1,400 @@
+{
+  "cell": {
+    "source": "视觉效果/概念图/单细胞.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "kind": "source-crop",
+    "hero": 0,
+    "views": [
+      {
+        "label": "正面",
+        "image": "/atlas/cell-0.webp",
+        "rect": [
+          0,
+          293,
+          601,
+          673
+        ]
+      },
+      {
+        "label": "侧面",
+        "image": "/atlas/cell-1.webp",
+        "rect": [
+          601,
+          293,
+          854,
+          673
+        ]
+      },
+      {
+        "label": "背面",
+        "image": "/atlas/cell-2.webp",
+        "rect": [
+          854,
+          293,
+          1448,
+          673
+        ]
+      }
+    ]
+  },
+  "flagellate": {
+    "source": "视觉效果/概念图/鞭毛生物三视图2.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "kind": "source-crop",
+    "hero": 1,
+    "views": [
+      {
+        "label": "正面",
+        "image": "/atlas/flagellate-0.webp",
+        "rect": [
+          108,
+          113,
+          445,
+          430
+        ]
+      },
+      {
+        "label": "左侧",
+        "image": "/atlas/flagellate-1.webp",
+        "rect": [
+          568,
+          113,
+          1536,
+          440
+        ]
+      },
+      {
+        "label": "右侧",
+        "image": "/atlas/flagellate-2.webp",
+        "rect": [
+          8,
+          512,
+          975,
+          901
+        ]
+      },
+      {
+        "label": "背面",
+        "image": "/atlas/flagellate-3.webp",
+        "rect": [
+          1044,
+          512,
+          1505,
+          911
+        ]
+      }
+    ]
+  },
+  "colony": {
+    "source": "视觉效果/概念图/多细胞概念图.png",
+    "size": [
+      1491,
+      1055
+    ],
+    "kind": "source-crop",
+    "hero": 0,
+    "views": [
+      {
+        "label": "正面",
+        "image": "/atlas/colony-0.webp",
+        "rect": [
+          15,
+          63,
+          731,
+          506
+        ]
+      },
+      {
+        "label": "侧面",
+        "image": "/atlas/colony-1.webp",
+        "rect": [
+          760,
+          63,
+          1476,
+          506
+        ]
+      },
+      {
+        "label": "背面",
+        "image": "/atlas/colony-2.webp",
+        "rect": [
+          15,
+          591,
+          731,
+          1034
+        ]
+      },
+      {
+        "label": "顶部",
+        "image": "/atlas/colony-3.webp",
+        "rect": [
+          760,
+          591,
+          1476,
+          1034
+        ]
+      }
+    ]
+  },
+  "worm": {
+    "source": "视觉效果/概念图/蠕虫四视图.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "kind": "source-crop",
+    "hero": 1,
+    "views": [
+      {
+        "label": "正面",
+        "image": "/atlas/worm-0.webp",
+        "rect": [
+          26,
+          119,
+          340,
+          434
+        ]
+      },
+      {
+        "label": "侧面",
+        "image": "/atlas/worm-1.webp",
+        "rect": [
+          355,
+          147,
+          1434,
+          424
+        ]
+      },
+      {
+        "label": "背面",
+        "image": "/atlas/worm-2.webp",
+        "rect": [
+          26,
+          576,
+          340,
+          901
+        ]
+      },
+      {
+        "label": "顶部",
+        "image": "/atlas/worm-3.webp",
+        "rect": [
+          355,
+          576,
+          1434,
+          901
+        ]
+      }
+    ]
+  },
+  "bivalve": {
+    "source": "视觉效果/概念图/双壳贝三视图.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "kind": "source-crop",
+    "hero": 2,
+    "views": [
+      {
+        "label": "正面",
+        "image": "/atlas/bivalve-0.webp",
+        "rect": [
+          31,
+          15,
+          753,
+          466
+        ]
+      },
+      {
+        "label": "侧面",
+        "image": "/atlas/bivalve-1.webp",
+        "rect": [
+          799,
+          15,
+          1513,
+          466
+        ]
+      },
+      {
+        "label": "背面",
+        "image": "/atlas/bivalve-2.webp",
+        "rect": [
+          31,
+          512,
+          753,
+          947
+        ]
+      },
+      {
+        "label": "顶部",
+        "image": "/atlas/bivalve-3.webp",
+        "rect": [
+          799,
+          522,
+          1521,
+          937
+        ]
+      }
+    ]
+  },
+  "slug": {
+    "source": "视觉效果/概念图/海蛞蝓三视图.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "kind": "source-crop",
+    "hero": 1,
+    "views": [
+      {
+        "label": "正面",
+        "image": "/atlas/slug-0.webp",
+        "rect": [
+          14,
+          43,
+          521,
+          478
+        ]
+      },
+      {
+        "label": "侧面",
+        "image": "/atlas/slug-1.webp",
+        "rect": [
+          536,
+          43,
+          1434,
+          478
+        ]
+      },
+      {
+        "label": "背面",
+        "image": "/atlas/slug-2.webp",
+        "rect": [
+          14,
+          576,
+          521,
+          1021
+        ]
+      },
+      {
+        "label": "顶部",
+        "image": "/atlas/slug-3.webp",
+        "rect": [
+          536,
+          576,
+          1434,
+          1021
+        ]
+      }
+    ]
+  },
+  "finfish": {
+    "source": "视觉效果/概念图/腔棘鱼三视图.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "kind": "source-crop",
+    "hero": 1,
+    "views": [
+      {
+        "label": "正面",
+        "image": "/atlas/finfish-0.webp",
+        "rect": [
+          14,
+          65,
+          405,
+          521
+        ]
+      },
+      {
+        "label": "侧面",
+        "image": "/atlas/finfish-1.webp",
+        "rect": [
+          420,
+          65,
+          1434,
+          521
+        ]
+      },
+      {
+        "label": "背面",
+        "image": "/atlas/finfish-2.webp",
+        "rect": [
+          14,
+          586,
+          405,
+          1021
+        ]
+      },
+      {
+        "label": "顶部",
+        "image": "/atlas/finfish-3.webp",
+        "rect": [
+          420,
+          586,
+          1434,
+          1021
+        ]
+      }
+    ]
+  },
+  "chordate": {
+    "source": "视觉效果/概念图/原始鱼类三视图.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "kind": "source-crop",
+    "hero": 1,
+    "views": [
+      {
+        "label": "正面",
+        "image": "/atlas/chordate-0.webp",
+        "rect": [
+          14,
+          65,
+          304,
+          445
+        ]
+      },
+      {
+        "label": "侧面",
+        "image": "/atlas/chordate-1.webp",
+        "rect": [
+          319,
+          54,
+          1434,
+          456
+        ]
+      },
+      {
+        "label": "背面",
+        "image": "/atlas/chordate-2.webp",
+        "rect": [
+          14,
+          554,
+          304,
+          988
+        ]
+      },
+      {
+        "label": "顶部",
+        "image": "/atlas/chordate-3.webp",
+        "rect": [
+          319,
+          576,
+          1434,
+          956
+        ]
+      }
+    ]
+  }
+}

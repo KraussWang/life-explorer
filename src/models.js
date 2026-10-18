@@ -9,8 +9,8 @@ export function preload(id){
  if(!cache.has(id)){const promise=loader.loadAsync('/models/'+byId[id].model).catch(e=>{cache.delete(id);throw e;});cache.set(id,promise);}
  return cache.get(id);
 }
-export async function makeModel(id){
- const spec=byId[id], group=new THREE.Group();group.name=id;
+export async function makeModel(id,{targetSize=byId[id].size}={}){
+ const group=new THREE.Group();group.name=id;
  // cell.glb is 3.95 units long on local X (versus 2 on Y and 1.47 on Z).
  // Its slightly tapered +X end is the leading end. Align that axis with the
  // controller's -Z forward; the other assets have their own source axes.
@@ -23,7 +23,7 @@ export async function makeModel(id){
  }else{
   const gltf=await preload(id),root=clone(gltf.scene);root.updateMatrixWorld(true);
   const box=new THREE.Box3().setFromObject(root),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());
-  const factor=spec.size/Math.max(size.x,size.y,size.z);root.scale.multiplyScalar(factor);root.position.sub(center.multiplyScalar(factor));group.add(root);
+  const factor=targetSize/Math.max(size.x,size.y,size.z);root.scale.multiplyScalar(factor);root.position.sub(center.multiplyScalar(factor));group.add(root);
   if(id==='flagellate')addFlagellateInterior(root);
   root.traverse(o=>{if(o.isMesh){o.castShadow=id!=='flagellate';o.frustumCulled=false;
    if(id==='flagellate'&&o.name!=='Cytoplasmic granules'&&o.parent?.name!=='Flagellate interior'){
@@ -38,8 +38,8 @@ export async function makeModel(id){
 }
 export function animateModel(group,id,time,moving=false){
  if(!group)return;
- group.position.y=Math.sin(time*2)*(['worm','slug','bivalve'].includes(id)?.025:id==='cell'?.025:.1);
- group.rotation.z=Math.sin(time*2.4)*(id==='cell'?(moving?.012:.006):(moving?.035:.012));
+ group.position.y=id==='bivalve'?0:Math.sin(time*2)*(['worm','slug'].includes(id)?.025:id==='cell'?.025:.1);
+ group.rotation.z=id==='bivalve'?0:Math.sin(time*2.4)*(id==='cell'?(moving?.012:.006):(moving?.035:.012));
  if(id==='cell')group.scale.set(1+Math.sin(time*2)*.01,1-Math.sin(time*2)*.008,1);
  group.traverse(o=>{if(o.userData.motionTime)o.userData.motionTime.value=time;if(o.userData.segment!==undefined){const i=o.userData.segment;o.position.x=Math.sin(time*(moving?6:2)-i*.55)*.13;}});
 }
