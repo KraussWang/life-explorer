@@ -11,6 +11,7 @@ const entry=(id,name,latin,category,rarity,model,trait,habitat,description,extra
 });
 const evolution=id=>({type:'evolution',species:id,hint:'沿演化路线到达这一生命形态。'});
 const explore=(environment,kind)=>({type:'exploration',environment,kind,hint:environment==='primordial'?'藻类生长后，靠近海底的对应植物观察。':'在扇贝浅海栖息地靠近对应生物观察。'});
+const chapterModelViews={F03:'coelacanth',A01:'amniote',M03:'manatee'};
 export const catalog=[
  entry('cell','单细胞','Primordial cell','evolution','common','/models/cell.glb','细胞膜 · 物质交换','原始海洋 · 热液喷口附近','细胞膜划出了内外两个世界，微小生命开始探索富含营养的海洋。',{unlock:evolution('cell')}),
  entry('flagellate','鞭毛细胞','Flagellate','evolution','common','/models/flagellate.glb','鞭毛运动 · 主动觅食','原始海洋 · 冷流交汇处','运动结构使细胞能够主动寻找营养，也让聚集与协作成为可能。',{unlock:evolution('flagellate')}),
@@ -38,7 +39,7 @@ export const catalog=[
  entry('tyrannosaur','霸王龙','Tyrannosaurus rex','evolution','key','/atlas/models/tyrannosaur.glb','两足支撑 · 大型捕食','白垩纪晚期 · 陆地','大型兽脚类恐龙的一种代表，展现陆地脊椎动物的形态多样性。'),
  entry('elephant','象','Elephantidae','evolution','key','/atlas/models/elephant.glb','长鼻 · 四肢承重','陆地 · 林地与草原','长鼻与承重四肢体现大型陆生哺乳动物不同的取食与运动方式。'),
  ...NODES.map(node=>entry(node.id,node.name,node.id,'evolution',node.terminal?'key':'rare',node.model||'/atlas/models/whale.glb',node.trait,node.biomePreset,node.note,{
-   era:node.eraPreset,unlock:evolution(node.id),image:{kind:'model-render',source:node.model,hero:1,views:['正面','侧面','背面','顶部'].map((label,i)=>({label,image:node.id==='A04'?'/atlas/chapter-bird.svg':node.id==='M03'?'/atlas/chapter-manatee.svg':`/atlas/${node.atlas}-${i}.webp`}))},
+   era:node.eraPreset,unlock:evolution(node.id),image:{kind:'model-render',source:node.model,hero:1,views:['正面','侧面','背面','顶部'].map((label,i)=>({label,image:chapterModelViews[node.id]?`/atlas/${chapterModelViews[node.id]}-${i}.png`:node.id==='A04'?'/atlas/chapter-bird.svg':`/atlas/${node.atlas}-${i}.webp`}))},
    ...(node.proxy?{description:node.note+' 当前使用简化概念模型，后续可替换精细资产。'}:{})
  })),
 ];

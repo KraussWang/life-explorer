@@ -7,7 +7,7 @@ import {advanceFacing} from '../src/chapters/steering.js';
 
 const complete=s=>{for(const task of byNode[s.node].tasks)for(let i=0;i<task.target;i++)taskProgress(s,task.id);assert.ok(stageComplete(s),s.node);};
 test('all chapter models align their observed head axis with local -Z',()=>{
- const headAtPositiveZ=new Set(['F01','F02','F04','T02','A03','A04','M01','M02']);
+ const headAtPositiveZ=new Set(['F01','F02','F03','F04','T02','A01','A03','A04','M01','M02','M03']);
  for(const node of NODES)assert.equal(node.modelYaw,headAtPositiveZ.has(node.id)?Math.PI:0,node.id);
 });
 test('a reversing creature waits to turn and advances only along its current facing',()=>{

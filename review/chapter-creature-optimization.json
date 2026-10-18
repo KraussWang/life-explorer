@@ -1,0 +1,26 @@
+[
+  {
+    "model": "coelacanth",
+    "source": "视觉效果\\3D资产\\腔棘鱼\\base_basic_pbr.glb",
+    "sourceFaces": 900000,
+    "runtimeFaces": 100000,
+    "sourceBytes": 62270852,
+    "runtimeBytes": 9930864
+  },
+  {
+    "model": "amniote",
+    "source": "视觉效果\\3D资产\\早期羊膜生物\\base_basic_pbr.glb",
+    "sourceFaces": 33798,
+    "runtimeFaces": 30000,
+    "sourceBytes": 15317864,
+    "runtimeBytes": 4880644
+  },
+  {
+    "model": "manatee",
+    "source": "视觉效果\\3D资产\\海牛\\base_basic_pbr.glb",
+    "sourceFaces": 900000,
+    "runtimeFaces": 79999,
+    "sourceBytes": 39647104,
+    "runtimeBytes": 6983724
+  }
+]
