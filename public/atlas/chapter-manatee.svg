@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="海牛类示意剪影">
+ <defs><radialGradient id="bg"><stop stop-color="#3c7779"/><stop offset="1" stop-color="#153743"/></radialGradient><linearGradient id="body" x2="0" y2="1"><stop stop-color="#abbba9"/><stop offset="1" stop-color="#657f77"/></linearGradient></defs>
+ <rect width="800" height="600" fill="url(#bg)"/>
+ <path d="M139 296Q187 236 325 215Q507 186 624 260Q668 284 675 316Q662 346 603 362Q492 414 316 393Q199 385 139 335Q115 312 139 296Z" fill="url(#body)" stroke="#c8d9c6" stroke-width="7"/>
+ <path d="M240 375Q225 444 171 473Q206 458 269 412M573 365Q644 419 714 390Q694 344 635 333" fill="#81998a" stroke="#c8d9c6" stroke-width="6"/>
+ <circle cx="218" cy="286" r="8" fill="#203936"/><path d="M137 321Q172 340 211 332" fill="none" stroke="#45615d" stroke-width="9" stroke-linecap="round"/>
+ <text x="400" y="555" fill="#dbe5d4" text-anchor="middle" font-size="22" font-family="sans-serif" letter-spacing="4">海牛类形态示意 · MODEL REFERENCE</text>
+</svg>

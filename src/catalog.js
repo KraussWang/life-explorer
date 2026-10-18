@@ -1,4 +1,5 @@
 import images from '../public/atlas/images.json' with {type:'json'};
+import {NODES} from './chapters/data.js';
 
 export const categories={all:'全部',evolution:'演化生物',plant:'环境植物',marine:'海洋生物'};
 export const rarities={common:'普通',rare:'稀有',key:'关键节点'};
@@ -36,6 +37,10 @@ export const catalog=[
  entry('tree','树状植物','Arborescent vegetation','plant','rare','/atlas/models/tree.glb','木质支撑 · 树冠结构','陆地 · 林地','向上生长的支撑结构将枝叶带到更高处，形成多层次的陆地环境。'),
  entry('tyrannosaur','霸王龙','Tyrannosaurus rex','evolution','key','/atlas/models/tyrannosaur.glb','两足支撑 · 大型捕食','白垩纪晚期 · 陆地','大型兽脚类恐龙的一种代表，展现陆地脊椎动物的形态多样性。'),
  entry('elephant','象','Elephantidae','evolution','key','/atlas/models/elephant.glb','长鼻 · 四肢承重','陆地 · 林地与草原','长鼻与承重四肢体现大型陆生哺乳动物不同的取食与运动方式。'),
+ ...NODES.map(node=>entry(node.id,node.name,node.id,'evolution',node.terminal?'key':'rare',node.model||'/atlas/models/whale.glb',node.trait,node.biomePreset,node.note,{
+   era:node.eraPreset,unlock:evolution(node.id),image:{kind:'model-render',source:node.model,hero:1,views:['正面','侧面','背面','顶部'].map((label,i)=>({label,image:node.id==='A04'?'/atlas/chapter-bird.svg':node.id==='M03'?'/atlas/chapter-manatee.svg':`/atlas/${node.atlas}-${i}.webp`}))},
+   ...(node.proxy?{description:node.note+' 当前使用简化概念模型，后续可替换精细资产。'}:{})
+ })),
 ];
 export const catalogById=Object.fromEntries(catalog.map(s=>[s.id,s]));
 export function isDiscovered(state,entry){return entry.unlock.type==='evolution'?state.unlocked.includes(entry.unlock.species):(state.discoveries||[]).includes(entry.id);}

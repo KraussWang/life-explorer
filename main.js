@@ -8,12 +8,15 @@ import {createObjectives} from './src/objectives.js';
 import {loadNutrientFlocAsset} from './src/nutrient-floc.js';
 import {createAtlas} from './src/atlas.js';
 import {nearbyDiscoveries,recordDiscovery,catalogById} from './src/catalog.js';
+import {readChapter} from './src/chapters/progress.js';
+import {createBackgroundMusic} from './src/background-music.js';
 
 const $=id=>document.getElementById(id),canvas=$('ocean');
 const SCALLOP_PLAYER_SIZE=.55,SCALLOP_CAMERA_ZOOM=4;
 const makePlayerModel=id=>makeModel(id,id==='bivalve'?{targetSize:SCALLOP_PLAYER_SIZE}:undefined);
-let worldDirty=true;
+let worldDirty=true,chapterMode=false;
 let storage;try{storage=window.localStorage;}catch{storage=null;}
+const music=createBackgroundMusic($('music-toggle'),storage);
 const saved=readSave(storage);let state=fresh(),world,primordialWorld,scallopWorld,objectives,model,started=false,busy=false,transition=null,elapsed=0,warmth=100;
 const player=new THREE.Group(),keys=new Set();let yaw=0,pitch=.3,zoom=10,dragging=false,moving=false,scallopModelBottom=0;
 const shadowCanvas=document.createElement('canvas');shadowCanvas.width=shadowCanvas.height=128;
@@ -24,14 +27,14 @@ shadowGradient.addColorStop(1,'rgba(255,255,255,0)');
 shadowContext.fillStyle=shadowGradient;shadowContext.fillRect(0,0,128,128);
 const contactShadow=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({color:0x514938,map:new THREE.CanvasTexture(shadowCanvas),transparent:true,opacity:.45,depthWrite:false,side:THREE.DoubleSide}));
 contactShadow.rotation.x=-Math.PI/2;contactShadow.visible=false;player.add(contactShadow);
-const atlas=createAtlas(()=>state);let toastTimer,saveTimer=0,uiTimer=0,lastFrame=performance.now(),fpsStart=lastFrame,frames=0;
+const atlas=createAtlas(()=>{const chapter=readChapter(storage);return {...state,unlocked:[...new Set([...state.unlocked,...(chapter?.unlocked||[])])],completed:chapter?.completed||[]};});let toastTimer,saveTimer=0,uiTimer=0,lastFrame=performance.now(),fpsStart=lastFrame,frames=0;
 const vector=new THREE.Vector3(),desiredCamera=new THREE.Vector3(),cameraTarget=new THREE.Vector3();
 const heading=new THREE.Vector3(),desiredHeading=new THREE.Quaternion(),up=new THREE.Vector3(0,1,0);
 function toast(text){$('toast').textContent=text;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),4500);}
 function modalOpen(){return !!document.querySelector('dialog[open]');}
-function active(){return started&&!busy&&!transition&&!modalOpen()&&!document.hidden;}
+function active(){return started&&!chapterMode&&!busy&&!transition&&!modalOpen()&&!document.hidden;}
 function show(id){keys.clear();dragging=false;$(id).showModal();}
-function close(id){$(id).close();keys.clear();canvas.focus();}
+function close(id){$(id).close();if(id==='pause')music.resume();keys.clear();canvas.focus();}
 for(const b of document.querySelectorAll('[data-close]'))b.onclick=()=>close(b.dataset.close);
 for(const d of document.querySelectorAll('dialog')){d.addEventListener('cancel',e=>{e.preventDefault();if(d.id!=='welcome'&&!busy)close(d.id);});d.addEventListener('close',()=>keys.clear());}
 function save(){if(!started)return;state.position=player.position.toArray();$('save-status').textContent=writeSave(storage,state)?'✓ 进度已保存':'存储不可用 · 仅本次会话';}
@@ -79,20 +82,36 @@ function leaveScallop(){
 }
 async function start(next){
  if(busy)return;busy=true;
- try{const [object,nextWorld]=await Promise.all([makePlayerModel(next.species),prepareWorld(next.species)]);state=next;activateWorld(nextWorld);player.position.fromArray(state.position);if(state.species==='bivalve'&&state.position[0]===0&&state.position[2]===5)player.position.fromArray(world.spawn);player.quaternion.identity();player.scale.setScalar(1);setModel(object);if(state.species==='bivalve')placeScallopOnSand();else world.constrain(player.position);state.position=player.position.toArray();objectives.build(state);applyQuality();started=true;warmth=100;$('hud').hidden=false;document.querySelectorAll('dialog[open]').forEach(d=>d.close());yaw=0;pitch=.3;zoom=state.species==='bivalve'?SCALLOP_CAMERA_ZOOM:10;updateCamera(1,true);updateUI();save();preloadNext();canvas.focus();leaveScallop();if(byId[state.species].ending&&state.species!=='bivalve')showEnding();else toast(state.species==='bivalve'?'扇贝谱系已解锁 · 按 Tab 查看图鉴，继续探索浅海。':state.species==='cell'?'WASD 寻找灰白有机絮团；靠近自动吸收，按 R 对准目标。':'已恢复探索，当前条件与图鉴均已保留。');}
- catch(e){leaveScallop();toast('形态或场景载入失败，请重试。'+e.message);}
+ try{const [object,nextWorld]=await Promise.all([makePlayerModel(next.species),prepareWorld(next.species)]);state=next;activateWorld(nextWorld);player.position.fromArray(state.position);if(state.species==='bivalve'&&state.position[0]===0&&state.position[2]===5)player.position.fromArray(world.spawn);player.quaternion.identity();player.scale.setScalar(1);setModel(object);if(state.species==='bivalve')placeScallopOnSand();else world.constrain(player.position);state.position=player.position.toArray();objectives.build(state);applyQuality();started=true;warmth=100;$('hud').hidden=false;document.querySelectorAll('dialog[open]').forEach(d=>d.close());yaw=0;pitch=.3;zoom=state.species==='bivalve'?SCALLOP_CAMERA_ZOOM:10;updateCamera(1,true);updateUI();save();preloadNext();canvas.focus();leaveScallop();music.resume();if(byId[state.species].ending&&state.species!=='bivalve')showEnding();else toast(state.species==='bivalve'?'扇贝谱系已解锁 · 按 Tab 查看图鉴，继续探索浅海。':state.species==='cell'?'WASD 寻找灰白有机絮团；靠近自动吸收，按 R 对准目标。':'已恢复探索，当前条件与图鉴均已保留。');}
+ catch(e){music.pause();leaveScallop();toast('形态或场景载入失败，请重试。'+e.message);}
  finally{busy=false;}
 }
 function newJourney(){const next=fresh();next.unlocked=[...new Set([...(started?state.unlocked:saved.state?.unlocked||[]),'cell'])];next.discoveries=[...(started?state.discoveries:saved.state?.discoveries||[])];next.quality=started?state.quality:saved.state?.quality||'low';return start(next);}
-$('start').onclick=()=>{if(saved.state){$('save-warning').hidden=false;$('save-warning').textContent='重新开始会替换当前进度，已发现图鉴保留。再次点击确认。';if($('start').dataset.confirmed==='true')newJourney();$('start').dataset.confirmed='true';}else newJourney();};
-$('continue').onclick=()=>start(saved.state);
-function openPause(){if(!started||transition||busy||modalOpen())return;save();$('branch-pause').disabled=!state.checkpoint;$('restart-confirm').hidden=true;show('pause');}
+$('start').onclick=()=>{if(saved.state){$('save-warning').hidden=false;$('save-warning').textContent='重新开始会替换当前进度，已发现图鉴保留。再次点击确认。';if($('start').dataset.confirmed==='true'){music.start();newJourney();}$('start').dataset.confirmed='true';}else{music.start();newJourney();}};
+$('continue').onclick=()=>{music.start();start(saved.state);};
+function openChapter(){
+ if(chapterMode||!(state.unlocked.includes('fish')||saved.state?.unlocked?.includes('fish')||readChapter(storage)))return;
+ save();music.pause();chapterMode=true;keys.clear();dragging=false;
+ document.querySelectorAll('dialog[open]').forEach(dialog=>dialog.close());
+ const frame=$('chapter-frame');frame.hidden=false;frame.src='/chapters.html?embedded=1';frame.focus();
+}
+function closeChapter(){
+ if(!chapterMode)return;
+ const frame=$('chapter-frame');frame.hidden=true;frame.removeAttribute('src');chapterMode=false;worldDirty=true;
+ if(!started){$('chapter-resume-link').hidden=!readChapter(storage);show('welcome');}
+ if(started)music.resume();
+ canvas.focus();
+}
+$('fish-chapter-entry').onclick=openChapter;
+$('chapter-resume-link').onclick=openChapter;
+window.addEventListener('message',event=>{if(event.origin===location.origin&&event.source===$('chapter-frame').contentWindow&&event.data?.type==='life-explorer:return-to-ocean')closeChapter();});
+function openPause(){if(!started||chapterMode||transition||busy||modalOpen())return;save();$('branch-pause').disabled=!state.checkpoint;$('restart-confirm').hidden=true;music.pause();show('pause');}
 $('pause-button').onclick=openPause;$('resume').onclick=()=>close('pause');
 $('quality').onclick=()=>{state.quality=state.quality==='high'?'low':'high';applyQuality();save();};
 $('save-now').onclick=()=>{save();toast($('save-status').textContent);};
 $('restart').onclick=()=>$('restart-confirm').hidden=false;
 $('cancel-restart').onclick=()=>$('restart-confirm').hidden=true;
-$('confirm-restart').onclick=newJourney;
+$('confirm-restart').onclick=()=>{music.resume();newJourney();};
 function openAtlas(){if(!started||transition||busy)return;if($('atlas').open){close('atlas');return;}document.querySelectorAll('dialog[open]').forEach(d=>d.close());show('atlas');atlas.open();}
 $('atlas-button').onclick=openAtlas;$('ending-atlas').onclick=openAtlas;
 async function branch(){if(busy||transition)return;const next=restoreBranch(state);if(next)await start(next);}
@@ -118,7 +137,7 @@ function stepEvolution(dt){
  if(t.switched&&state.species==='bivalve')placeScallopOnSand();
  if(progress>=1){player.scale.setScalar(1);if(state.species==='bivalve')placeScallopOnSand();transition=null;warmth=100;$('transition').hidden=true;updateUI();save();preloadNext();if(byId[state.species].ending&&state.species!=='bivalve')showEnding();else toast(state.species==='bivalve'?'扇贝谱系已解锁 · 按 Tab 查看图鉴，继续探索浅海。':state.species==='colony'?'寒潮退去，早期生命海洋出现新的食物与特化资源。':'新形态已解锁：'+byId[state.species].name);}
 }
-function showEnding(){const s=byId[state.species];$('ending-icon').textContent=s.icon;$('ending-name').textContent=s.name;$('ending-description').textContent=s.description;show('ending');}
+function showEnding(){const s=byId[state.species];$('ending-icon').textContent=s.icon;$('ending-name').textContent=s.name;$('ending-description').textContent=s.description;$('fish-chapter-entry').hidden=state.species!=='fish';show('ending');}
 const requirementNames={nutrient:'营养吸收',cold:'进入冷流区',gathered:'靠近同类群',food:'复杂食物',specialization:'特化资源'};
 function updateUI(){
  const spec=byId[state.species],can=available(state);$('species-name').textContent=spec.name;$('species-trait').textContent=spec.trait;$('phase-label').textContent=phase(state);
@@ -191,7 +210,7 @@ canvas.addEventListener('pointermove',e=>{if(!dragging||!active())return;yaw-=e.
 canvas.addEventListener('pointerup',()=>dragging=false);canvas.addEventListener('pointercancel',()=>dragging=false);
 canvas.addEventListener('wheel',e=>{e.preventDefault();if(active())zoom=THREE.MathUtils.clamp(zoom+e.deltaY*.01,state.species==='bivalve'?2.8:5,state.species==='bivalve'?14:20);},{passive:false});
 document.addEventListener('keydown',e=>{
- if(!started)return;
+ if(!started||chapterMode)return;
  if(e.code==='Tab'&&!modalOpen()&&!transition){e.preventDefault();openAtlas();return;}
  if(e.code==='Escape'){if(!modalOpen()){e.preventDefault();openPause();}return;}
  if(!active())return;
@@ -205,11 +224,11 @@ window.addEventListener('pagehide',save);
 window.addEventListener('resize',()=>{world?.resize?.();worldDirty=true;});
 function frame(now){
  requestAnimationFrame(frame);const dt=Math.min((now-lastFrame)/1000,.05);lastFrame=now;if(!world)return;
- const playing=active(),animating=!document.hidden&&(!started||playing||!!transition);
+ const playing=active(),animating=!chapterMode&&!document.hidden&&(!started||playing||!!transition);
  if(animating){elapsed+=dt;world.tick(dt);world.environment(state.cold==='active',growthForSpecies(state.species),dt);animateModel(model,state.species,elapsed,moving);if(transition)stepEvolution(dt);}
  if(playing){move(dt);if(objectives.update(state,player.position,elapsed,true,toast)){updateUI();save();if(available(state))toast('条件已达成！按 E 选择演化方向。');}saveTimer+=dt;if(saveTimer>4){save();saveTimer=0;}}
  if(!modalOpen()||!started)updateCamera(dt);
- if(!document.hidden&&(animating||!modalOpen()||worldDirty)){world.render();worldDirty=false;}
+ if(!chapterMode&&!document.hidden&&(animating||!modalOpen()||worldDirty)){world.render();worldDirty=false;}
  atlas.tick(now/1000);uiTimer+=dt;if(uiTimer>.12&&started){updateTarget();uiTimer=0;if(playing){const found=nearbyDiscoveries(world,player.position).filter(id=>recordDiscovery(state,id));if(found.length){save();toast('图鉴新发现：'+found.map(id=>catalogById[id].name).join('、'));}}}
  frames++;if(now-fpsStart>1000){$('fps').textContent=Math.round(frames*1000/(now-fpsStart))+' FPS';fpsStart=now;frames=0;}
 }
@@ -217,7 +236,7 @@ async function init(){
  try{
   const results=await Promise.all([createWorld(canvas,p=>$('progress').style.width=p*80+'%'),makeModel('cell'),loadNutrientFlocAsset()]);world=primordialWorld=results[0];setModel(results[1]);world.scene.add(player);player.position.set(0,5,22);world.constrain(player.position);objectives=createObjectives(world,results[2]);updateCamera(1,true);
   $('progress').style.width='95%';$('load-label').textContent='正在准备水体与生命光影…';await world.renderer.compileAsync(world.scene,world.camera);
-  $('loading').classList.add('done');$('continue').hidden=!saved.state;if(saved.state)$('start').textContent='开始新的旅程';if(saved.error){$('save-warning').hidden=false;$('save-warning').textContent='存档无法读取：'+saved.error+'。可开始新旅程。';}show('welcome');
+  $('loading').classList.add('done');$('continue').hidden=!saved.state;const chapterSave=!!readChapter(storage);$('chapter-resume-link').hidden=!chapterSave&&!saved.state?.unlocked?.includes('fish');if(saved.state)$('start').textContent='开始新的旅程';if(saved.error){$('save-warning').hidden=false;$('save-warning').textContent='存档无法读取：'+saved.error+'。可开始新旅程。';}show('welcome');
   // Read-only diagnostics for browser acceptance tests; no gameplay bypass is shipped.
   window.__life={get ready(){return !!world;},get snapshot(){return {state:structuredClone(state),phase:transition?'EVOLVING':$('choice').open?'CHOOSING':phase(state),environment:world===scallopWorld?'scallop':'primordial',position:player.position.toArray(),yaw,paused:modalOpen(),target:objectives.target(state,player.position)?{type:objectives.target(state,player.position).type,position:objectives.target(state,player.position).position.toArray()}:null,model:model?.name,modelBottom:state.species==='bivalve'?new THREE.Box3().setFromObject(model).min.y:null,cameraY:world.camera.position.y,cameraGround:world.groundHeight(world.camera.position.x,world.camera.position.z),facing:new THREE.Vector3(0,0,-1).applyQuaternion(player.quaternion).toArray(),cellAxis:state.species==='cell'?new THREE.Vector3(1,0,0).applyQuaternion(model.getWorldQuaternion(new THREE.Quaternion())).toArray():null,drawCalls:world.renderer.info.render.calls,triangles:world.renderer.info.render.triangles,quality:{pixelRatio:world.renderer.getPixelRatio(),shadows:world.renderer.shadowMap.enabled},ground:world.groundHeight(player.position.x,player.position.z)};}};
  }catch(e){console.error(e);$('load-label').textContent='加载失败：'+e.message;$('retry-load').hidden=false;}

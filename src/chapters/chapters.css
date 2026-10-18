@@ -1,0 +1,39 @@
+.chapter-game #chapter-canvas{position:fixed;inset:0;width:100vw;height:100vh;display:block;outline:none}
+.chapter-game #chapter-hud{position:fixed;inset:0;pointer-events:none}
+.chapter-game #chapter-hud button,.chapter-game header,.chapter-game footer{pointer-events:auto}
+.chapter-game #model-disclaimer{display:inline-block;margin:.8rem 0 0;padding:.35rem .65rem;border:1px solid #efcf91;border-radius:6px;color:#ffdf9a;background:#281f17ba;font-size:.78rem}
+.chapter-game #model-disclaimer[hidden]{display:none}
+.chapter-game #chapter-marker{position:fixed;z-index:5;display:flex;flex-direction:column;align-items:center;gap:.15rem;color:#f4ead4;text-shadow:0 2px 6px #132124;font-size:1.25rem;pointer-events:none;transform:translate(-50%,-50%)}
+.chapter-game #chapter-marker small{white-space:nowrap;background:#153037ba;padding:.28rem .5rem;border-radius:4px;font-size:.7rem}
+.chapter-game #ecology-pressure{position:fixed;left:50%;top:7rem;z-index:6;transform:translateX(-50%);min-width:180px;padding:.5rem .75rem;background:#102e36c4;border:1px solid #a1c3bc55;border-radius:7px;color:#e6eee9;font-size:.72rem}
+.chapter-game #ecology-pressure .meter{margin-top:.35rem}
+.chapter-game #chapter-toast{position:fixed;left:50%;bottom:7rem;z-index:30;transform:translate(-50%,10px);padding:.65rem 1rem;background:#122b32e8;color:#f1eddc;border:1px solid #abbca665;border-radius:8px;box-shadow:0 8px 28px #0018;opacity:0;transition:opacity .3s,transform .3s;pointer-events:none;max-width:min(90vw,600px);text-align:center}
+.chapter-game #chapter-toast.show{opacity:1;transform:translate(-50%,0)}
+.chapter-game #chapter-loading{position:fixed;inset:0;z-index:45;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#091f29;color:#edf5e9}
+.chapter-game #chapter-loading[hidden]{display:none}
+.chapter-game #chapter-transition{position:fixed;inset:0;z-index:35;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:2rem;text-align:center;background:radial-gradient(circle at center,#315265e8,#061c28f5);color:#f3f2e7}
+.chapter-game #chapter-transition[hidden]{display:none}
+.chapter-game #chapter-transition h2{font-size:clamp(2rem,5vw,4rem);margin:.5rem 0}
+.chapter-game #chapter-transition p{max-width:680px;line-height:1.7}
+.chapter-game #chapter-transition .load-track{width:min(460px,80vw);margin:1rem 0}
+.chapter-game #skip-transition{border:1px solid #d7e7df77;background:#102c36aa;color:#f1f6ef;border-radius:5px;padding:.5rem 1rem;cursor:pointer}
+.chapter-game #chapter-pause{max-width:380px;padding:2rem;background:#102c34;color:#f2f4e9;border:1px solid #8dbab070;border-radius:12px}
+.chapter-game #chapter-pause button:not(.dialog-top button){display:block;width:100%;margin:.55rem 0;padding:.7rem;cursor:pointer}
+.chapter-game #chapter-pause small{display:block;margin-top:1rem;opacity:.7}
+.chapter-game #chapter-choices #chapter-choice-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;max-height:55vh;overflow:auto}
+.chapter-game #chapter-choices .choice-card{min-width:0}
+.chapter-game .mission{left:auto;right:36px;top:135px;width:320px;z-index:4}
+.chapter-game .mission .eyebrow #stage-status{margin-left:auto;font-size:8px;letter-spacing:.8px;color:#aac6bd}
+.chapter-game .lineage{max-width:75vw;margin-inline:auto;overflow-x:auto;justify-content:flex-start;white-space:nowrap}
+.chapter-game .ending-actions a.primary,.ending-actions #fish-chapter-entry{display:flex;align-items:center;justify-content:center;background:var(--gold);color:#20332c;border:1px solid var(--gold);border-radius:6px;text-decoration:none;padding:12px 17px;font-size:12px;font-weight:600}
+.chapter-game .egg-dialog{text-align:center;width:min(520px,92vw)}
+.chapter-game .egg-dialog h2{font-size:25px}
+.chapter-game .egg-dialog p{font-size:12px;text-align:left}
+.chapter-game .egg-visual{display:grid;place-items:center;height:235px;background:radial-gradient(ellipse,#5b684950,#152c3370 65%);border-radius:9px;margin:1rem 0}
+.chapter-game .egg-shell{width:175px;height:205px;border-radius:50% 50% 48% 48%;background:#ddcda4;border:9px solid #f0e4c7;display:grid;place-items:center;animation:eggPulse 3s ease-in-out infinite}
+.chapter-game .egg-chorion{width:140px;height:165px;border-radius:50%;background:#aebf9d;border:5px solid #668f89;display:grid;place-items:center}
+.chapter-game .egg-amnion{width:95px;height:110px;border-radius:50%;background:#527b7d;border:5px solid #b8d9c8;display:grid;place-items:center;color:#f0f4e8;font-size:13px}
+.chapter-game .egg-legend{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;color:#b9d5c7;font-size:10px;margin-bottom:1rem}
+.chapter-game .egg-dialog .primary{width:100%;justify-content:center}
+@keyframes eggPulse{50%{transform:scale(1.035)}}
+@media(max-width:700px){.chapter-game .mission{top:8rem;right:.5rem;max-width:48vw}.chapter-game .chapter{top:5rem;left:.5rem;max-width:48vw}.chapter-game #chapter-toast{bottom:5rem}}
